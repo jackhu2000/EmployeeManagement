@@ -22,19 +22,19 @@ namespace EmployeeManagement
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            string cs = @"server=localhost;port=3306;userid=root;password=Sophon123;database=employee_management";
+            string cs = @"server=sql6.freesqldatabase.com;port=3306;userid=sql6527607;password=t4Rtas3nkN;database=sql6527607";
             using var con = new MySqlConnection(cs);
             try
             {
                 con.Open();
-                string sql = "SELECT username, password, priviledge FROM account WHERE username='" + username + "' AND password='" + password + "'" ;
+                string sql = "SELECT username, password, role FROM account WHERE username='" + username + "' AND password='" + password + "'" ;
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.HasRows)
                 {
                     rdr.Read();
                     string priviledge = rdr[2].ToString();
-                    if (priviledge == "admin")
+                    if (priviledge == "a")
                     {
                         Form1 adminForm = new Form1();
                         adminForm.Show();
