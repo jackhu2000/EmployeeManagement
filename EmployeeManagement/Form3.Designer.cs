@@ -38,6 +38,7 @@ namespace EmployeeManagement
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Form3";
             this.Text = "Employee Form";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
 
         }
