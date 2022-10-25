@@ -41,14 +41,14 @@ namespace EmployeeManagement
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(380, 108);
+            this.txtUsername.Location = new System.Drawing.Point(179, 123);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(197, 25);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(380, 153);
+            this.txtPassword.Location = new System.Drawing.Point(179, 168);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(197, 25);
@@ -56,7 +56,7 @@ namespace EmployeeManagement
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(380, 205);
+            this.btnLogin.Location = new System.Drawing.Point(179, 220);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(87, 25);
             this.btnLogin.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace EmployeeManagement
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(298, 113);
+            this.lblUsername.Location = new System.Drawing.Point(97, 128);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(65, 17);
             this.lblUsername.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace EmployeeManagement
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(298, 161);
+            this.lblPassword.Location = new System.Drawing.Point(97, 176);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(65, 17);
             this.lblPassword.TabIndex = 4;
@@ -86,16 +86,15 @@ namespace EmployeeManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(298, 52);
+            this.label1.Location = new System.Drawing.Point(97, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(279, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Employee Management System";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSignUP
             // 
-            this.btnSignUP.Location = new System.Drawing.Point(494, 205);
+            this.btnSignUP.Location = new System.Drawing.Point(293, 220);
             this.btnSignUP.Name = "btnSignUP";
             this.btnSignUP.Size = new System.Drawing.Size(83, 25);
             this.btnSignUP.TabIndex = 6;
@@ -104,11 +103,10 @@ namespace EmployeeManagement
             this.btnSignUP.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmLogin
-
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 323);
+            this.ClientSize = new System.Drawing.Size(476, 323);
             this.Controls.Add(this.btnSignUP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPassword);
@@ -118,8 +116,6 @@ namespace EmployeeManagement
             this.Controls.Add(this.txtUsername);
             this.Name = "frmLogin";
             this.Text = "Login - Employee Management System";
-            //this.Load += new System.EventHandler(this.Login_Load);
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
