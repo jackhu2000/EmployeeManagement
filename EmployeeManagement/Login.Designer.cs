@@ -2,6 +2,7 @@
 namespace EmployeeManagement
 {
     partial class frmLogin
+
     {
         /// <summary>
         /// Required designer variable.
@@ -103,6 +104,7 @@ namespace EmployeeManagement
             this.btnSignUP.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmLogin
+
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,6 +119,7 @@ namespace EmployeeManagement
             this.Name = "frmLogin";
             this.Text = "Login - Employee Management System";
             //this.Load += new System.EventHandler(this.Login_Load);
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
