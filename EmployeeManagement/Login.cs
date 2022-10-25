@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace EmployeeManagement
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -36,13 +36,15 @@ namespace EmployeeManagement
                     string priviledge = rdr[2].ToString();
                     if (priviledge == "a")
                     {
-                        Form1 adminForm = new Form1();
+                        adminForm adminForm = new adminForm();
                         adminForm.Show();
+                        this.Hide();
                     }
                     else
                     {
-                        Form3 employeForm = new Form3();
+                        employeeForm employeForm = new employeeForm();
                         employeForm.Show();
+                        this.Hide();
                     }
                 }
                 else
@@ -58,20 +60,11 @@ namespace EmployeeManagement
             }
             con.Close();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
+            Form createUserForm = new frmCreateUser();
+            createUserForm.Show();
+            this.Hide();
         }
     }
 }
