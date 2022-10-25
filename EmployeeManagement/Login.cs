@@ -65,7 +65,7 @@ namespace EmployeeManagement
         {
             Form createUserForm = new frmCreateUser();
             createUserForm.Show();
-            this.Hide();            
+            this.Hide();
         }
 
 
