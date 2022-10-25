@@ -91,7 +91,6 @@ namespace EmployeeManagement
             this.label1.Size = new System.Drawing.Size(279, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Employee Management System";
-            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSignUP
             // 
@@ -104,7 +103,6 @@ namespace EmployeeManagement
             this.btnSignUP.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmLogin
-
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +116,6 @@ namespace EmployeeManagement
             this.Controls.Add(this.txtUsername);
             this.Name = "frmLogin";
             this.Text = "Login - Employee Management System";
-            //this.Load += new System.EventHandler(this.Login_Load);
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
