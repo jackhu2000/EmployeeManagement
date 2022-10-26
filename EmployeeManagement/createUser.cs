@@ -36,7 +36,8 @@ namespace EmployeeManagement
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             string confirm = txtConfirm.Text;
-            string cs = @"server=sql6.freesqldatabase.com;port=3306;userid=sql6527607;password=t4Rtas3nkN;database=sql6527607";
+            Operator engine = new Operator();
+            string cs = engine.getConnectionString();
             using var con = new MySqlConnection(cs);
             try
             {

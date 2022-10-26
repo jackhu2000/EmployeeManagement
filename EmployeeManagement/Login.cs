@@ -9,6 +9,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 
 
+
 namespace EmployeeManagement
 {
     public partial class frmLogin : Form
@@ -22,7 +23,8 @@ namespace EmployeeManagement
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            string cs = @"server=sql6.freesqldatabase.com;port=3306;userid=sql6527607;password=t4Rtas3nkN;database=sql6527607";
+            Operator engine = new Operator();
+            string cs = engine.getConnectionString();
             using var con = new MySqlConnection(cs);
             try
             {
@@ -34,7 +36,7 @@ namespace EmployeeManagement
                 {
                     rdr.Read();
                     string priviledge = rdr[2].ToString();
-                    if (priviledge == "a")
+                    if (priviledge == engine.getAdminRole())
                     {
                         adminForm adminForm = new adminForm();
                         adminForm.Show();
