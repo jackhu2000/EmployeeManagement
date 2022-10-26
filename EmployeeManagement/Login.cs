@@ -9,11 +9,12 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 
 
+
 namespace EmployeeManagement
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -22,7 +23,8 @@ namespace EmployeeManagement
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            string cs = @"server=sql6.freesqldatabase.com;port=3306;userid=sql6527607;password=t4Rtas3nkN;database=sql6527607";
+            Operator engine = new Operator();
+            string cs = engine.getConnectionString();
             using var con = new MySqlConnection(cs);
             try
             {
@@ -34,15 +36,17 @@ namespace EmployeeManagement
                 {
                     rdr.Read();
                     string priviledge = rdr[2].ToString();
-                    if (priviledge == "a")
+                    if (priviledge == engine.getAdminRole())
                     {
-                        Form1 adminForm = new Form1();
+                        adminForm adminForm = new adminForm();
                         adminForm.Show();
+                        this.Hide();
                     }
                     else
                     {
-                        Form3 employeForm = new Form3();
+                        employeeForm employeForm = new employeeForm();
                         employeForm.Show();
+                        this.Hide();
                     }
                 }
                 else
@@ -58,10 +62,11 @@ namespace EmployeeManagement
             }
             con.Close();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-
+            Form createUserForm = new frmCreateUser();
+            createUserForm.Show();
+            this.Hide();
         }
     }
 }
