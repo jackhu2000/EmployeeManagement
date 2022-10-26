@@ -42,7 +42,7 @@ namespace EmployeeManagement
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(256, 181);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(280, 31);
             this.txtUsername.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace EmployeeManagement
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(256, 247);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(280, 31);
@@ -59,7 +59,7 @@ namespace EmployeeManagement
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(256, 324);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(124, 37);
             this.btnLogin.TabIndex = 2;
@@ -94,15 +94,15 @@ namespace EmployeeManagement
             this.label1.Location = new System.Drawing.Point(139, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(414, 32);
+            this.label1.Size = new System.Drawing.Size(392, 32);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Employee Management Systemmm";
+            this.label1.Text = "Employee Management Systemm";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSignUP
             // 
             this.btnSignUP.Location = new System.Drawing.Point(419, 324);
-            this.btnSignUP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignUP.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignUP.Name = "btnSignUP";
             this.btnSignUP.Size = new System.Drawing.Size(119, 37);
             this.btnSignUP.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace EmployeeManagement
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "Login - Employee Management System";
             this.ResumeLayout(false);
