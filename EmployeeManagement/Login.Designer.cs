@@ -41,24 +41,27 @@ namespace EmployeeManagement
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(179, 123);
+            this.txtUsername.Location = new System.Drawing.Point(256, 181);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(197, 25);
+            this.txtUsername.Size = new System.Drawing.Size(280, 31);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(179, 168);
+            this.txtPassword.Location = new System.Drawing.Point(256, 247);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(197, 25);
+            this.txtPassword.Size = new System.Drawing.Size(280, 31);
             this.txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(179, 220);
+            this.btnLogin.Location = new System.Drawing.Point(256, 324);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(87, 25);
+            this.btnLogin.Size = new System.Drawing.Size(124, 37);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -67,18 +70,20 @@ namespace EmployeeManagement
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(97, 128);
+            this.lblUsername.Location = new System.Drawing.Point(139, 188);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(65, 17);
+            this.lblUsername.Size = new System.Drawing.Size(89, 25);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "username";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(97, 176);
+            this.lblPassword.Location = new System.Drawing.Point(139, 259);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(65, 17);
+            this.lblPassword.Size = new System.Drawing.Size(89, 25);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "password";
             // 
@@ -86,17 +91,20 @@ namespace EmployeeManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(97, 67);
+            this.label1.Location = new System.Drawing.Point(139, 99);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 25);
+            this.label1.Size = new System.Drawing.Size(458, 32);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Employee Management System";
+            this.label1.Text = "Employee Management Systemmmmm";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSignUP
             // 
-            this.btnSignUP.Location = new System.Drawing.Point(293, 220);
+            this.btnSignUP.Location = new System.Drawing.Point(419, 324);
+            this.btnSignUP.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignUP.Name = "btnSignUP";
-            this.btnSignUP.Size = new System.Drawing.Size(83, 25);
+            this.btnSignUP.Size = new System.Drawing.Size(119, 37);
             this.btnSignUP.TabIndex = 6;
             this.btnSignUP.Text = "&Sign Up";
             this.btnSignUP.UseVisualStyleBackColor = true;
@@ -104,9 +112,9 @@ namespace EmployeeManagement
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 323);
+            this.ClientSize = new System.Drawing.Size(680, 475);
             this.Controls.Add(this.btnSignUP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPassword);
@@ -114,6 +122,7 @@ namespace EmployeeManagement
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.Text = "Login - Employee Management System";
             this.ResumeLayout(false);
