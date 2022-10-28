@@ -35,8 +35,8 @@ namespace EmployeeManagement
                 if (rdr.HasRows)
                 {
                     rdr.Read();
-                    string priviledge = rdr[2].ToString();
-                    if (priviledge == engine.getAdminRole())
+                    string role = rdr[2].ToString();
+                    if (role != "")
                     {
                         adminForm adminForm = new adminForm();
                         adminForm.Show();
