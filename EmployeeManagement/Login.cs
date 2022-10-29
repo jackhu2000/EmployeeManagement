@@ -36,7 +36,7 @@ namespace EmployeeManagement
                 {
                     rdr.Read();
                     string role = rdr[2].ToString();
-                    if (role != "")
+                    if (role == engine.getAdminRole())
                     {
                         adminForm adminForm = new adminForm();
                         adminForm.Show();
