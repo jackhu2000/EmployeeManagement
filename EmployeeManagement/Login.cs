@@ -78,6 +78,11 @@ namespace EmployeeManagement
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
+            // todo:
+            // ask user to provide email
+            // generate random password
+            // update new email for user in DB
+            // send new password to user email
             
             MessageBox.Show("Sending email");
             sendMail().Wait(1);
