@@ -52,7 +52,7 @@ namespace EmployeeManagement
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Username OR Password");
+                    MessageBox.Show("Wrong Username and/or Password");
                 }
                 
                 rdr.Close();
