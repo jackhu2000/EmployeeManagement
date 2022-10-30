@@ -10,6 +10,7 @@ using MySql.Data.MySqlClient;
 
 
 
+
 namespace EmployeeManagement
 {
     public partial class frmLogin : Form
@@ -29,14 +30,14 @@ namespace EmployeeManagement
             try
             {
                 con.Open();
-                string sql = "SELECT username, password, role FROM account WHERE username='" + username + "' AND password='" + password + "'" ;
+                string sql = "SELECT username, password, isAdmin FROM account WHERE username='" + username + "' AND password='" + password + "'" ;
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.HasRows)
                 {
                     rdr.Read();
-                    string priviledge = rdr[2].ToString();
-                    if (priviledge == engine.getAdminRole())
+                    bool role = (bool)rdr[2];
+                    if (role)
                     {
                         adminForm adminForm = new adminForm();
                         adminForm.Show();

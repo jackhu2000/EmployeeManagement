@@ -1,23 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
+using System.Configuration;
+using System.Collections.Specialized;
 
 namespace EmployeeManagement
 {
     public class Operator
     {
-        private string cs = @"server=sql6.freesqldatabase.com;port=3306;userid=sql6527607;password=t4Rtas3nkN;database=sql6527607";
-        private string adminRole = "a";
+
+        
+        
         public Operator()
         {
         }
         public string getConnectionString()
         {
+            string cs = "";
+            // Read all the keys from the config file
+            NameValueCollection sAll;
+            sAll = ConfigurationManager.AppSettings;
+            foreach (string key in sAll.AllKeys)
+                cs += key + "=" + sAll.Get(key) + ";";
+            cs = @cs.Substring(0, cs.Length - 1);
             return cs;
         }
-        public string getAdminRole()
-        {
-            return adminRole;
-        }
+
+
     }
 }
