@@ -89,9 +89,9 @@ namespace EmployeeManagement
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(97, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 25);
+            this.label1.Size = new System.Drawing.Size(279, 25);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Employee Management Systemmmmm";
+            this.label1.Text = "Employee Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSignUP
@@ -119,7 +119,7 @@ namespace EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 323);
+            this.ClientSize = new System.Drawing.Size(477, 323);
             this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnSignUP);
             this.Controls.Add(this.label1);
