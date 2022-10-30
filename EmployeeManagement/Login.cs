@@ -7,8 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-
-
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Threading.Tasks;
 
 
 namespace EmployeeManagement
@@ -74,5 +75,30 @@ namespace EmployeeManagement
         {
 
         }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            
+            MessageBox.Show("Sending email");
+            sendMail().Wait(1);
+            MessageBox.Show("Email sent");
+            
+        }
+
+        async Task sendMail()
+        {
+            var apiKey = "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";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
+            var subject = "Sending with SendGrid is Fun";
+            var to = new EmailAddress("keosophon8888@gmail.com", "keo sophon");
+            var plainTextContent = "and easy to do anywhere, even with C#";
+            var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
+            
+         
+        }
+
     }
 }

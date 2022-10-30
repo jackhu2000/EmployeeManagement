@@ -114,6 +114,7 @@ namespace EmployeeManagement
             this.btnForgotPassword.TabIndex = 7;
             this.btnForgotPassword.Text = "&Forgot Password";
             this.btnForgotPassword.UseVisualStyleBackColor = true;
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
             // frmLogin
             // 
