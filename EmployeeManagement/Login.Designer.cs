@@ -36,7 +36,6 @@ namespace EmployeeManagement
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSignUP = new System.Windows.Forms.Button();
             this.btnForgotPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -94,23 +93,11 @@ namespace EmployeeManagement
             this.label1.Text = "Employee Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnSignUP
-            // 
-            this.btnSignUP.Enabled = false;
-            this.btnSignUP.Location = new System.Drawing.Point(97, 251);
-            this.btnSignUP.Name = "btnSignUP";
-            this.btnSignUP.Size = new System.Drawing.Size(103, 25);
-            this.btnSignUP.TabIndex = 6;
-            this.btnSignUP.Text = "&Sign Up";
-            this.btnSignUP.UseVisualStyleBackColor = true;
-            this.btnSignUP.Visible = false;
-            this.btnSignUP.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // btnForgotPassword
             // 
             this.btnForgotPassword.Location = new System.Drawing.Point(218, 220);
             this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(158, 56);
+            this.btnForgotPassword.Size = new System.Drawing.Size(158, 25);
             this.btnForgotPassword.TabIndex = 7;
             this.btnForgotPassword.Text = "&Forgot Password";
             this.btnForgotPassword.UseVisualStyleBackColor = true;
@@ -120,9 +107,8 @@ namespace EmployeeManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 323);
+            this.ClientSize = new System.Drawing.Size(470, 323);
             this.Controls.Add(this.btnForgotPassword);
-            this.Controls.Add(this.btnSignUP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -144,7 +130,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSignUP;
         private System.Windows.Forms.Button btnForgotPassword;
     }
 }
