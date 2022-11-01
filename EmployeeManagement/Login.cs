@@ -27,6 +27,7 @@ namespace EmployeeManagement
             string password = txtPassword.Text;
             Operator engine = new Operator();
             string cs = engine.getConnectionString();
+            MessageBox.Show(cs);
             using var con = new MySqlConnection(cs);
             try
             {
