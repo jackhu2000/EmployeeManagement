@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EmployeeManagement": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "apikey": "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"
+      }
+    }
+  }
+}

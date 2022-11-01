@@ -84,7 +84,6 @@ namespace EmployeeManagement
             // update new email for user in DB
             // send new password to user email
             
-            MessageBox.Show("Sending email");
             sendMail().Wait(1);
             MessageBox.Show("Email sent");
             
@@ -92,8 +91,8 @@ namespace EmployeeManagement
 
         async Task sendMail()
         {
-            var apiKey = "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";
-            var client = new SendGridClient(apiKey);
+            var apikey = Environment.GetEnvironmentVariable("apikey");
+            var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
             var subject = "Sending with SendGrid is Fun";
             var to = new EmailAddress("keosophon8888@gmail.com", "keo sophon");
