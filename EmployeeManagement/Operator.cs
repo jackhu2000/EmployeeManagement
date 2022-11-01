@@ -22,7 +22,19 @@ namespace EmployeeManagement
             NameValueCollection sAll;
             sAll = ConfigurationManager.AppSettings;
             foreach (string key in sAll.AllKeys)
-                cs += key + "=" + sAll.Get(key) + ";";
+            {
+                if (key == "userid" || key == "password")
+                {
+                    cs += key + "=" + Environment.GetEnvironmentVariable(key) + ";";
+                }
+
+                else
+                {
+                    cs += key + "=" + sAll.Get(key) + ";";
+                }
+
+            }
+
             cs = @cs.Substring(0, cs.Length - 1);
             return cs;
         }
