@@ -39,6 +39,13 @@ namespace EmployeeManagement
             return cs;
         }
 
+        public string createRandomPassword()
+        {
+            string randomPassword = "";
+
+
+            return randomPassword;
+        }
        
 
 

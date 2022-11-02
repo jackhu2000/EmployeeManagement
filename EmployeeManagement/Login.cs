@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 using System.Threading.Tasks;
-
+using Microsoft.VisualBasic;
 
 namespace EmployeeManagement
 {
@@ -27,7 +27,6 @@ namespace EmployeeManagement
             string password = txtPassword.Text;
             Operator engine = new Operator();
             string cs = engine.getConnectionString();
-            MessageBox.Show(cs);
             using var con = new MySqlConnection(cs);
             try
             {
@@ -92,6 +91,7 @@ namespace EmployeeManagement
 
         async Task sendMail()
         {
+
             var apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
