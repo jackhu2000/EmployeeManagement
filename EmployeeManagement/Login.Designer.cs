@@ -36,7 +36,6 @@ namespace EmployeeManagement
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnForgotPassword = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -56,7 +55,7 @@ namespace EmployeeManagement
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(97, 220);
+            this.btnLogin.Location = new System.Drawing.Point(179, 227);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 25);
             this.btnLogin.TabIndex = 2;
@@ -93,22 +92,11 @@ namespace EmployeeManagement
             this.label1.Text = "Employee Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnForgotPassword
-            // 
-            this.btnForgotPassword.Location = new System.Drawing.Point(218, 220);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(158, 25);
-            this.btnForgotPassword.TabIndex = 7;
-            this.btnForgotPassword.Text = "&Forgot Password";
-            this.btnForgotPassword.UseVisualStyleBackColor = true;
-            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 323);
-            this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
@@ -130,6 +118,5 @@ namespace EmployeeManagement
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnForgotPassword;
     }
 }
