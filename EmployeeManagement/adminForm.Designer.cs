@@ -31,13 +31,14 @@ namespace EmployeeManagement
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form1";
+            this.Name = "adminForm";
             this.Text = "Admin Form";
+            this.Load += new System.EventHandler(this.adminForm_Load);
             this.ResumeLayout(false);
 
         }

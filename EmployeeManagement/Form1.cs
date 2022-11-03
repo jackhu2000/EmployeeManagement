@@ -8,18 +8,11 @@ using System.Windows.Forms;
 
 namespace EmployeeManagement
 {
-    public partial class employeeForm : Form
+    public partial class frmPasswordUpdate : Form
     {
-        private string username;
-        public employeeForm(string loginName)
+        public frmPasswordUpdate()
         {
             InitializeComponent();
-            username = loginName;
-        }
-
-        private void employeeForm_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
