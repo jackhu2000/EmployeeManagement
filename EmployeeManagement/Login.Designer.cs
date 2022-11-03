@@ -55,7 +55,7 @@ namespace EmployeeManagement
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(179, 227);
+            this.btnLogin.Location = new System.Drawing.Point(179, 221);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 25);
             this.btnLogin.TabIndex = 2;

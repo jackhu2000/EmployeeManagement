@@ -10,9 +10,16 @@ namespace EmployeeManagement
 {
     public partial class adminForm : Form
     {
-        public adminForm()
+        private string username;
+        public adminForm(string loginName)
         {
             InitializeComponent();
+            username = loginName;
+        }
+
+        private void adminForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,8 +21,10 @@ namespace EmployeeManagement
             InitializeComponent();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
+            //login button click handling
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             Operator engine = new Operator();
@@ -40,16 +42,18 @@ namespace EmployeeManagement
                     bool role = (bool)rdr[2];
                     if (role)
                     {
-                        adminForm adminForm = new adminForm();
+                        adminForm adminForm = new adminForm(rdr[0].ToString());
                         adminForm.Show();
                         this.Hide();
                     }
                     else
                     {
-                        employeeForm employeForm = new employeeForm();
+                        employeeForm employeForm = new employeeForm(rdr[0].ToString());
                         employeForm.Show();
                         this.Hide();
                     }
+                    //engine.setLoginInfo(rdr[0].ToString());
+                    
                 }
                 else
                 {
