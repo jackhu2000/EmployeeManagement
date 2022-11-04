@@ -21,5 +21,11 @@ namespace EmployeeManagement
         {
             
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmPasswordUpdate passWordUpdateForm = new frmPasswordUpdate(this.username);
+            passWordUpdateForm.Show();
+        }
     }
 }

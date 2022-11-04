@@ -29,65 +29,65 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtOldPassword = new System.Windows.Forms.Label();
-            this.txtNewPassword = new System.Windows.Forms.Label();
-            this.txtConfirmPassword = new System.Windows.Forms.Label();
-            this.txtOldPassW = new System.Windows.Forms.TextBox();
-            this.txtNewPass = new System.Windows.Forms.TextBox();
-            this.txtConfirmNewPass = new System.Windows.Forms.TextBox();
+            this.lblOldPassword = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.txtOldPassWord = new System.Windows.Forms.TextBox();
+            this.txtNewPassWord = new System.Windows.Forms.TextBox();
+            this.txtConfirmNewPassWord = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtOldPassword
+            // lblOldPassword
             // 
-            this.txtOldPassword.AutoSize = true;
-            this.txtOldPassword.Location = new System.Drawing.Point(87, 50);
-            this.txtOldPassword.Name = "txtOldPassword";
-            this.txtOldPassword.Size = new System.Drawing.Size(89, 17);
-            this.txtOldPassword.TabIndex = 0;
-            this.txtOldPassword.Text = "Old Password";
+            this.lblOldPassword.AutoSize = true;
+            this.lblOldPassword.Location = new System.Drawing.Point(87, 50);
+            this.lblOldPassword.Name = "lblOldPassword";
+            this.lblOldPassword.Size = new System.Drawing.Size(89, 17);
+            this.lblOldPassword.TabIndex = 0;
+            this.lblOldPassword.Text = "Old Password";
             // 
-            // txtNewPassword
+            // lblNewPassword
             // 
-            this.txtNewPassword.AutoSize = true;
-            this.txtNewPassword.Location = new System.Drawing.Point(87, 100);
-            this.txtNewPassword.Name = "txtNewPassword";
-            this.txtNewPassword.Size = new System.Drawing.Size(94, 17);
-            this.txtNewPassword.TabIndex = 1;
-            this.txtNewPassword.Text = "New Password";
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Location = new System.Drawing.Point(87, 100);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(94, 17);
+            this.lblNewPassword.TabIndex = 1;
+            this.lblNewPassword.Text = "New Password";
             // 
-            // txtConfirmPassword
+            // lblConfirmPassword
             // 
-            this.txtConfirmPassword.AutoSize = true;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(122, 148);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(54, 17);
-            this.txtConfirmPassword.TabIndex = 2;
-            this.txtConfirmPassword.Text = "Confirm";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Location = new System.Drawing.Point(122, 148);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(54, 17);
+            this.lblConfirmPassword.TabIndex = 2;
+            this.lblConfirmPassword.Text = "Confirm";
             // 
-            // txtOldPassW
+            // txtOldPassWord
             // 
-            this.txtOldPassW.Location = new System.Drawing.Point(203, 47);
-            this.txtOldPassW.Name = "txtOldPassW";
-            this.txtOldPassW.Size = new System.Drawing.Size(187, 25);
-            this.txtOldPassW.TabIndex = 1;
-            this.txtOldPassW.UseSystemPasswordChar = true;
+            this.txtOldPassWord.Location = new System.Drawing.Point(203, 47);
+            this.txtOldPassWord.Name = "txtOldPassWord";
+            this.txtOldPassWord.Size = new System.Drawing.Size(187, 25);
+            this.txtOldPassWord.TabIndex = 1;
+            this.txtOldPassWord.UseSystemPasswordChar = true;
             // 
-            // txtNewPass
+            // txtNewPassWord
             // 
-            this.txtNewPass.Location = new System.Drawing.Point(203, 92);
-            this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(187, 25);
-            this.txtNewPass.TabIndex = 2;
-            this.txtNewPass.UseSystemPasswordChar = true;
+            this.txtNewPassWord.Location = new System.Drawing.Point(203, 92);
+            this.txtNewPassWord.Name = "txtNewPassWord";
+            this.txtNewPassWord.Size = new System.Drawing.Size(187, 25);
+            this.txtNewPassWord.TabIndex = 2;
+            this.txtNewPassWord.UseSystemPasswordChar = true;
             // 
-            // txtConfirmNewPass
+            // txtConfirmNewPassWord
             // 
-            this.txtConfirmNewPass.Location = new System.Drawing.Point(203, 140);
-            this.txtConfirmNewPass.Name = "txtConfirmNewPass";
-            this.txtConfirmNewPass.Size = new System.Drawing.Size(187, 25);
-            this.txtConfirmNewPass.TabIndex = 3;
-            this.txtConfirmNewPass.UseSystemPasswordChar = true;
+            this.txtConfirmNewPassWord.Location = new System.Drawing.Point(203, 140);
+            this.txtConfirmNewPassWord.Name = "txtConfirmNewPassWord";
+            this.txtConfirmNewPassWord.Size = new System.Drawing.Size(187, 25);
+            this.txtConfirmNewPassWord.TabIndex = 3;
+            this.txtConfirmNewPassWord.UseSystemPasswordChar = true;
             // 
             // btnSubmit
             // 
@@ -105,12 +105,12 @@ namespace EmployeeManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 276);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.txtConfirmNewPass);
-            this.Controls.Add(this.txtNewPass);
-            this.Controls.Add(this.txtOldPassW);
-            this.Controls.Add(this.txtConfirmPassword);
-            this.Controls.Add(this.txtNewPassword);
-            this.Controls.Add(this.txtOldPassword);
+            this.Controls.Add(this.txtConfirmNewPassWord);
+            this.Controls.Add(this.txtNewPassWord);
+            this.Controls.Add(this.txtOldPassWord);
+            this.Controls.Add(this.lblConfirmPassword);
+            this.Controls.Add(this.lblNewPassword);
+            this.Controls.Add(this.lblOldPassword);
             this.Name = "frmPasswordUpdate";
             this.Text = "Password Update Form";
             this.ResumeLayout(false);
@@ -120,12 +120,12 @@ namespace EmployeeManagement
 
         #endregion
 
-        private System.Windows.Forms.Label txtOldPassword;
-        private System.Windows.Forms.Label txtNewPassword;
-        private System.Windows.Forms.Label txtConfirmPassword;
-        private System.Windows.Forms.TextBox txtOldPassW;
-        private System.Windows.Forms.TextBox txtNewPass;
-        private System.Windows.Forms.TextBox txtConfirmNewPass;
+        private System.Windows.Forms.Label lblOldPassword;
+        private System.Windows.Forms.Label lblNewPassword;
+        private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.TextBox txtOldPassWord;
+        private System.Windows.Forms.TextBox txtNewPassWord;
+        private System.Windows.Forms.TextBox txtConfirmNewPassWord;
         private System.Windows.Forms.Button btnSubmit;
     }
 }

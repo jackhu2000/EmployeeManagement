@@ -40,6 +40,7 @@ namespace EmployeeManagement
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Update Password";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // employeeForm
             // 
