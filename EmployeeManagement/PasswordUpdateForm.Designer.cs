@@ -36,6 +36,7 @@ namespace EmployeeManagement
             this.txtNewPassWord = new System.Windows.Forms.TextBox();
             this.txtConfirmNewPassWord = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblOldPassword
@@ -91,7 +92,7 @@ namespace EmployeeManagement
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(203, 200);
+            this.btnSubmit.Location = new System.Drawing.Point(203, 194);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(83, 25);
             this.btnSubmit.TabIndex = 4;
@@ -99,11 +100,22 @@ namespace EmployeeManagement
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(307, 194);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 25);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "&Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPasswordUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 276);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtConfirmNewPassWord);
             this.Controls.Add(this.txtNewPassWord);
@@ -127,5 +139,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.TextBox txtNewPassWord;
         private System.Windows.Forms.TextBox txtConfirmNewPassWord;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace EmployeeManagement
 {
@@ -37,9 +39,24 @@ namespace EmployeeManagement
                 return;
             }
 
+            if (txtNewPassWord.Text.Length < 8)
+            {
+                MessageBox.Show("Your password should be 8-character length");
+                return;
+            }
 
+            Operator ope = new Operator();
+            string sql = "update account set password='" + txtNewPassWord.Text + "' " + "where username='" + this.username + "' " + ";";
+            if (ope.nonQueryExection(sql) != -1)
+            {
+                MessageBox.Show("Successfully updated new password!");
+            }       
 
-            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
