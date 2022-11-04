@@ -31,6 +31,12 @@ namespace EmployeeManagement
                 MessageBox.Show("Confirm input must be the same as New Password input");
                 return;
             }
+            if (txtOldPassWord.Text == txtNewPassWord.Text)
+            {
+                MessageBox.Show("New Password cannot be the same as Old Password");
+                return;
+            }
+
 
 
             
