@@ -4,6 +4,10 @@ using System.Text;
 using System.IO;
 using System.Configuration;
 using System.Collections.Specialized;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 
 namespace EmployeeManagement
 {
@@ -62,6 +66,24 @@ namespace EmployeeManagement
         }
         */
 
+        public int nonQueryExection(string sql)
+        {
+            string cs = this.getConnectionString();
+            using var con = new MySqlConnection(cs);
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                int returnVal = cmd.ExecuteNonQuery();
+                con.Close();
+                return returnVal;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error:\n" + ex.ToString());
+                return -1;
+            }
 
+        }
     }
 }
