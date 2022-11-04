@@ -10,16 +10,30 @@ namespace EmployeeManagement
 {
     public partial class frmPasswordUpdate : Form
     {
-        private string username = "RE00008";
-        private string password = "Birdee.Ahmed";
-        public frmPasswordUpdate()
+        private string username;
+        
+        public frmPasswordUpdate(string loginName)
         {
             InitializeComponent();
+            this.username = loginName;
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            if (txtOldPassWord.Text == "" || txtNewPassWord.Text == "" || txtConfirmNewPassWord.Text == "")
+            {
+                MessageBox.Show("Please input Old Password, New Password and Confirm!");
+                return;
+            }
+            if (txtConfirmNewPassWord.Text != txtNewPassWord.Text)
+            {
+                MessageBox.Show("Confirm input must be the same as New Password input");
+                return;
+            }
 
+
+            
         }
     }
 }
