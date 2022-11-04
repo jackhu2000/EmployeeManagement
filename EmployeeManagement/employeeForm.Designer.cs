@@ -29,13 +29,24 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(97, 339);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(134, 25);
+            this.btnUpdate.TabIndex = 0;
+            this.btnUpdate.Text = "Update Password";
+            this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // employeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Name = "employeeForm";
             this.Text = "Employee Form";
             this.Load += new System.EventHandler(this.employeeForm_Load);
@@ -44,5 +55,7 @@ namespace EmployeeManagement
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
