@@ -7,6 +7,11 @@ using System.Collections.Specialized;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Net.Mail;
+using SendGrid;
+using SendGrid.Helpers.Mail;
+using System.Threading.Tasks;
+
 
 
 namespace EmployeeManagement
@@ -84,6 +89,41 @@ namespace EmployeeManagement
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader rdr = cmd.ExecuteReader();
             return rdr;
+        }
+
+        public bool IsValidEmail(string email)
+        {
+            try
+            {
+                MailAddress mail = new MailAddress(email);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public async Task sendMail(string toEmail)
+        {
+
+            var apikey = Environment.GetEnvironmentVariable("apikey");
+            var client = new SendGridClient(apikey);
+            var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
+            var subject = "Sending with SendGrid is Fun";
+            var to = new EmailAddress(toEmail);
+            var plainTextContent = "and easy to do anywhere, even with C#";
+            var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var response = await client.SendEmailAsync(msg);
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Sending mail succeeded!");
+            }
+            else
+            {
+                MessageBox.Show("Sending mail failed!");
+            }
         }
     }
 }
