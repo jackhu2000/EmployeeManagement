@@ -53,23 +53,15 @@ namespace EmployeeManagement
             return randomPassword;
         }
 
-        /*public void setLoginInfo(string username)
+
+        public MySqlConnection getMySqlConnection()
         {
-            //remember login username
-            login.Add("username:", username);
+            return new MySqlConnection(this.getConnectionString());
         }
-       
-        public string getLoginUsername()
-        {
-            //return login username
-            return login["username"];
-        }
-        */
 
         public int nonQueryExection(string sql)
         {
-            string cs = this.getConnectionString();
-            using var con = new MySqlConnection(cs);
+            MySqlConnection con = this.getMySqlConnection();
             try
             {
                 con.Open();
@@ -84,6 +76,14 @@ namespace EmployeeManagement
                 return -1;
             }
 
+        }
+
+        public MySqlDataReader getMySqlDataReader(string sql, MySqlConnection con)
+        {
+            
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            return rdr;
         }
     }
 }
