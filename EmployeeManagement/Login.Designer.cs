@@ -61,7 +61,7 @@ namespace EmployeeManagement
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblUsername
             // 
@@ -90,7 +90,7 @@ namespace EmployeeManagement
             this.label1.Size = new System.Drawing.Size(279, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Employee Management System";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmLogin
             // 

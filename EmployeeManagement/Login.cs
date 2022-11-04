@@ -22,38 +22,35 @@ namespace EmployeeManagement
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             //login button click handling
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-            Operator engine = new Operator();
-            string cs = engine.getConnectionString();
-            using var con = new MySqlConnection(cs);
+
+            string sql = "SELECT username, password, isAdmin FROM account WHERE username='" + txtUsername.Text + "' AND password='" + txtPassword.Text + "'";
+
+            Operator ope = new Operator();
+            MySqlConnection con = ope.getMySqlConnection();
             try
             {
                 con.Open();
-                string sql = "SELECT username, password, isAdmin FROM account WHERE username='" + username + "' AND password='" + password + "'" ;
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader rdr = cmd.ExecuteReader();
+                MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
                 if (rdr.HasRows)
                 {
                     rdr.Read();
-                    bool role = (bool)rdr[2];
-                    if (role)
+                    bool isAdmin = (bool)rdr[2];
+                    string username = rdr[0].ToString();
+                    if (isAdmin)
                     {
-                        adminForm adminForm = new adminForm(rdr[0].ToString());
+                        adminForm adminForm = new adminForm(username);
                         adminForm.Show();
                         this.Hide();
                     }
                     else
                     {
-                        employeeForm employeForm = new employeeForm(rdr[0].ToString());
+                        employeeForm employeForm = new employeeForm(username);
                         employeForm.Show();
                         this.Hide();
-                    }
-                    //engine.setLoginInfo(rdr[0].ToString());
-                    
+                    }                    
                 }
                 else
                 {
@@ -73,11 +70,6 @@ namespace EmployeeManagement
             Form createUserForm = new frmCreateUser();
             createUserForm.Show();
             this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
