@@ -1,7 +1,7 @@
 ﻿
 namespace EmployeeManagement
 {
-    partial class employeeForm1
+    partial class employeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace EmployeeManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeeForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeeForm));
             this.UserID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.FullName = new System.Windows.Forms.Label();

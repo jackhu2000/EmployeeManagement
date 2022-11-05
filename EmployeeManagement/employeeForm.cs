@@ -13,14 +13,14 @@ using System.Drawing.Printing;
 
 namespace EmployeeManagement
 {
-    public partial class employeeForm1 : Form
+    public partial class employeeForm : Form
     {
         //private string username;
-        public employeeForm1()
+        public employeeForm()
         {
             InitializeComponent();
         }
-        public employeeForm1(string loginName)
+        public employeeForm(string loginName)
         {
             InitializeComponent();
           //  username = loginName;
