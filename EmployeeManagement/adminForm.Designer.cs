@@ -33,9 +33,11 @@ namespace EmployeeManagement
             // 
             // adminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Navy;
+            this.ClientSize = new System.Drawing.Size(1143, 662);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "adminForm";
             this.Text = "Admin Form";
             this.Load += new System.EventHandler(this.adminForm_Load);

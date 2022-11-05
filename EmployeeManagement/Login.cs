@@ -45,7 +45,7 @@ namespace EmployeeManagement
                     }
                     else
                     {
-                        employeeForm employeForm = new employeeForm(username);
+                        employeeForm1 employeForm = new employeeForm1(username);
                         employeForm.Show();
                         this.Hide();
                     }                    
@@ -74,6 +74,11 @@ namespace EmployeeManagement
         {
             frmEmailAddressInput emailAddressInput = new frmEmailAddressInput();
             emailAddressInput.Show();           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
