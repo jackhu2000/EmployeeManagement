@@ -104,11 +104,14 @@ namespace EmployeeManagement
             }
         }
 
+   
+
 
         public async Task sendMail(string toEmail)
         {
 
-            var apikey = Environment.GetEnvironmentVariable("apikey");
+            string apikey = Environment.GetEnvironmentVariable("apikey");
+            MessageBox.Show(apikey);
             var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
             var subject = "Sending with SendGrid is Fun";
