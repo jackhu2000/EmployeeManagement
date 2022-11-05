@@ -45,7 +45,7 @@ namespace EmployeeManagement
                     }
                     else
                     {
-                        employeeForm1 employeForm = new employeeForm1(username);
+                        employeeForm employeForm = new employeeForm(username);
                         employeForm.Show();
                         this.Hide();
                     }                    
