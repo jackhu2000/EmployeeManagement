@@ -51,7 +51,7 @@ namespace EmployeeManagement
                     MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
                     if (rdr.HasRows)
                     {
-                        ope.sendMail(txtEmailAddress.Text).Wait(10);
+                        ope.sendMail(txtEmailAddress.Text);
                     }
                     else
                     {
