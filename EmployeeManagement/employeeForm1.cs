@@ -119,6 +119,10 @@ namespace EmployeeManagement
             _bitmap.Dispose();
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPasswordUpdate passWordUpdateForm = new frmPasswordUpdate(this.UserID.Text);
+            passWordUpdateForm.Show();
+        }
     }
 }
