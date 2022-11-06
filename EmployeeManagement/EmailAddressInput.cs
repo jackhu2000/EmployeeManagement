@@ -55,7 +55,7 @@ namespace EmployeeManagement
                     }
                     else
                     {
-                        MessageBox.Show("Email doesn't exist in the HRS system.\nPlease input again to continue!");
+                        MessageBox.Show("Email doesn't exist in RECA HRS system.\nPlease input again to continue!");
                     }
 
                     rdr.Close();

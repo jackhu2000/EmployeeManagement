@@ -52,10 +52,32 @@ namespace EmployeeManagement
 
         public string createRandomPassword()
         {
-            string randomPassword = "";
+            string createRandomString(int size, bool lowerCase)
+            {
+                StringBuilder stringBuilder1 = new StringBuilder();
+                Random random = new Random();
+                char ch;
+                for (int i = 0; i < size; i++)
+                {
+                    ch = Convert.ToChar(Convert.ToInt32(Math.Floor(26 * random.NextDouble() + 65)));
+                    stringBuilder1.Append(ch);
+                }
+                if (lowerCase) return stringBuilder1.ToString().ToLower();
+                return stringBuilder1.ToString();
+            }
 
+            int createRandomNumber(int min, int max)
+            {
+                Random random = new Random();
+                return random.Next(min, max);
+            }
 
-            return randomPassword;
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(createRandomString(4, true));
+            stringBuilder.Append(createRandomNumber(1000, 9999));
+            stringBuilder.Append(createRandomString(2, false));
+            
+            return stringBuilder.ToString();
         }
 
 
@@ -66,6 +88,8 @@ namespace EmployeeManagement
 
         public int nonQueryExection(string sql)
         {
+            //this funciton for executing INSERT, UPDATE or DELETE in database
+
             MySqlConnection con = this.getMySqlConnection();
             try
             {
@@ -85,7 +109,8 @@ namespace EmployeeManagement
 
         public MySqlDataReader getMySqlDataReader(string sql, MySqlConnection con)
         {
-            
+            //use for SELECT sql command
+
             MySqlCommand cmd = new MySqlCommand(sql, con);
             MySqlDataReader rdr = cmd.ExecuteReader();
             return rdr;
@@ -112,15 +137,18 @@ namespace EmployeeManagement
 
             string apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
-            var from = new EmailAddress("764701917@nzse.ac.nz", "RECA admin");
-            var subject = "Sending with SendGrid is Fun";
+            var from = new EmailAddress("764701917@nzse.ac.nz", "Administrator");
+            var subject = "New Password";
             var to = new EmailAddress(toEmail);
-            var plainTextContent = "and easy to do anywhere, even with C#";
-            var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
+            var newPassword = this.createRandomPassword();
+            var plainTextContent = "Here is your new password: " + newPassword;
+            var htmlContent = "<strong>Here is your new password: " + newPassword + "</strong>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             var response = await client.SendEmailAsync(msg);
             if (response.IsSuccessStatusCode)
             {
+                string sql = "update account set password='" + newPassword + "' " + "where email='" + toEmail + "' " + ";";
+                this.nonQueryExection(sql);
                 MessageBox.Show("Sending mail succeeded!");
             }
             else
