@@ -28,7 +28,7 @@ namespace EmployeeManagement
             UserID.Text = loginName;
 
 
-            string sql = "SELECT FirstName, LastName, Salary, TotalLeave, UsedLeaves, AddressLine1, AddressLine2, City, Phone FROM hrs.account WHERE username='" + loginName + "'";
+            string sql = "SELECT FirstName, LastName, Salary, TotalLeave, UsedLeaves, AddressLine1, AddressLine2, City, Phone, imgUrl FROM hrs.account WHERE username='" + loginName + "'";
             //string sql = "SELECT FirstName, LastName, Salary, TotalLeave FROM hrs.account WHERE username='" + loginName + "'";
 
             Operator ope = new Operator();
@@ -50,7 +50,9 @@ namespace EmployeeManagement
                     Address.Text = rdr[5].ToString() + " " + rdr[6].ToString();
                     City.Text = rdr[7].ToString();
                     Phone.Text = rdr[8].ToString();
-                    
+                    pictureBox1.Load(rdr[9].ToString());
+
+
                 }
                 else
                 {
@@ -66,12 +68,6 @@ namespace EmployeeManagement
             con.Close();
 
            
-        }
-
-
-        private void employeeForm1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void FirstName_Click(object sender, EventArgs e)
