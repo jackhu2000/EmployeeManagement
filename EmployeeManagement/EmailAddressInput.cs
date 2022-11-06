@@ -35,8 +35,6 @@ namespace EmployeeManagement
             // if valid input email, then check if the email exists in DB
             // if the email does not exist in DB, tell user email does not exist, ask the user to enter gain
             // if the email exists
-
-            // todo:
             // generate random password
             // update new password for user in DB
             // send new password to user email
