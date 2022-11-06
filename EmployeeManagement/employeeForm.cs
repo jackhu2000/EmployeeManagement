@@ -77,8 +77,11 @@ namespace EmployeeManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-        //    System.Windows.Forms.Application.Exit()
-            Application.Exit();
+            //    System.Windows.Forms.Application.Exit()
+            //Application.Exit();
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,6 +122,21 @@ namespace EmployeeManagement
         {
             frmPasswordUpdate passWordUpdateForm = new frmPasswordUpdate(this.UserID.Text);
             passWordUpdateForm.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
