@@ -134,13 +134,15 @@ namespace EmployeeManagement
 
         public async Task sendMail(string toEmail)
         {
+                        var newPassword = this.createRandomPassword();
+
 
             string apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "Administrator");
             var subject = "New Password";
             var to = new EmailAddress(toEmail);
-            var newPassword = this.createRandomPassword();
+            
             var plainTextContent = "Here is your new password: " + newPassword;
             var htmlContent = "<strong>Here is your new password: " + newPassword + "</strong>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
