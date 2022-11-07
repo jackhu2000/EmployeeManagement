@@ -67,7 +67,9 @@ namespace EmployeeManagement
             }
             else
             {
-                MessageBox.Show("It is not a valid email. Please input again!");
+                string text = "It is not a valid email. Please input your email address again!";
+                CustomMessageBox mBox = new CustomMessageBox(text);
+                mBox.Show();
             }
         }
     }
