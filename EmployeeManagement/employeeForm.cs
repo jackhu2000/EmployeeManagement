@@ -50,7 +50,9 @@ namespace EmployeeManagement
                     Address.Text = rdr[5].ToString() + " " + rdr[6].ToString();
                     City.Text = rdr[7].ToString();
                     Phone.Text = rdr[8].ToString();
-                    pictureBox1.Load(rdr[9].ToString());
+                    //MessageBox.Show(rdr[9].ToString());
+                    if (rdr[9].ToString()!="")
+                        pictureBox1.Load(rdr[9].ToString());
 
 
                 }
