@@ -53,23 +53,21 @@ namespace EmployeeManagement
                     }
                     else
                     {
-                        MessageBox.Show("Email doesn't exist in RECA HRS system.\nPlease input again to continue!");
+                        ope.displayMessageBox("Email doesn't exist in RECA HRS system.\nPlease input again to continue!");
                     }
 
                     rdr.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("error:\n" + ex.ToString());
+                    ope.displayMessageBox("error:\n" + ex.ToString());
                 }
                 con.Close();
 
             }
             else
             {
-                string text = "It is not a valid email. Please input your email address again!";
-                CustomMessageBox mBox = new CustomMessageBox(text);
-                mBox.Show();
+                ope.displayMessageBox("It is not a valid email. Please input your email address again!");            
             }
         }
     }

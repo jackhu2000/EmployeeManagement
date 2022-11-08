@@ -53,14 +53,14 @@ namespace EmployeeManagement
                 }
                 else
                 {
-                    MessageBox.Show("Wrong Username and/or Password");
+                    ope.displayMessageBox("Wrong Username and/or Password");
                 }
                 
                 rdr.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error:\n" + ex.ToString());
+                ope.displayMessageBox("error:\n" + ex.ToString());
             }
             con.Close();
         }
