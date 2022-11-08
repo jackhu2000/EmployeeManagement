@@ -101,7 +101,7 @@ namespace EmployeeManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error:\n" + ex.ToString());
+                this.displayMessageBox("error:\n" + ex.ToString());
                 return -1;
             }
 
@@ -151,12 +151,18 @@ namespace EmployeeManagement
             {
                 string sql = "update account set password='" + newPassword + "' " + "where email='" + toEmail + "' " + ";";
                 this.nonQueryExection(sql);
-                MessageBox.Show("Sending mail succeeded!");
+                this.displayMessageBox("Sending mail succeeded!");
             }
             else
             {
-                MessageBox.Show("Sending mail failed!");
+                this.displayMessageBox("Sending mail failed!");
             }
+        }
+
+        public void displayMessageBox(string text)
+        {
+            CustomMessageBox mBox = new CustomMessageBox(text);
+            mBox.Show();
         }
     }
 }

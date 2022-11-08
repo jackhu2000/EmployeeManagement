@@ -58,14 +58,14 @@ namespace EmployeeManagement
                 }
                 else
                 {
-                    MessageBox.Show("Record Not Found!");
+                    ope.displayMessageBox("Record Not Found!");
                 }
 
                 rdr.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error:\n" + ex.ToString());
+                ope.displayMessageBox("error:\n" + ex.ToString());
             }
             con.Close();
 
