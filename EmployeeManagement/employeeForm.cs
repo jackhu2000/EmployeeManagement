@@ -140,5 +140,11 @@ namespace EmployeeManagement
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmMesasge frmMesasge = new frmMesasge(UserID.Text);
+            frmMesasge.Show();
+        }
     }
 }
