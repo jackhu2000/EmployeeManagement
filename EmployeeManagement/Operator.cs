@@ -134,9 +134,7 @@ namespace EmployeeManagement
 
         public async Task sendMail(string toEmail)
         {
-                        var newPassword = this.createRandomPassword();
-
-
+            var newPassword = this.createRandomPassword();
             string apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "Administrator");
