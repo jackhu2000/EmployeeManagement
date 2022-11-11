@@ -40,27 +40,30 @@ namespace EmployeeManagement
                     string username = rdr[0].ToString();
                     if (isAdmin)
                     {
-                        adminForm adminForm = new adminForm(username);
-                        adminForm.Show();
-                        this.Close();
+                        SeleEmpForm seleEmpForm= new SeleEmpForm(username);
+                        seleEmpForm.Show();
+                        this.Hide();
                     }
                     else
                     {
-                        employeeForm employeForm = new employeeForm(username);
-                        employeForm.Show();
+                        //employeeForm employeForm = new employeeForm(username);
+                        //employeForm.Show();
+                        //this.Hide();
+                        SeleEmpForm seleEmpForm= new SeleEmpForm(username);
+                        seleEmpForm.Show();
                         this.Hide();
                     }                    
                 }
                 else
                 {
-                    ope.displayMessageBox("Wrong Username and/or Password");
+                    MessageBox.Show("Wrong Username and/or Password");
                 }
                 
                 rdr.Close();
             }
             catch (Exception ex)
             {
-                ope.displayMessageBox("error:\n" + ex.ToString());
+                MessageBox.Show("error:\n" + ex.ToString());
             }
             con.Close();
         }

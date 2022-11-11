@@ -58,14 +58,14 @@ namespace EmployeeManagement
                 }
                 else
                 {
-                    ope.displayMessageBox("Record Not Found!");
+                    MessageBox.Show("Record Not Found!");
                 }
 
                 rdr.Close();
             }
             catch (Exception ex)
             {
-                ope.displayMessageBox("error:\n" + ex.ToString());
+                MessageBox.Show("error:\n" + ex.ToString());
             }
             con.Close();
 
@@ -139,12 +139,6 @@ namespace EmployeeManagement
         private void UserID_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmMesasge frmMesasge = new frmMesasge(UserID.Text);
-            frmMesasge.Show();
         }
     }
 }

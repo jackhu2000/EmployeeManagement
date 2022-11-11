@@ -36,8 +36,8 @@ namespace EmployeeManagement
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             string confirm = txtConfirm.Text;
-            Operator ope = new Operator();
-            string cs = ope.getConnectionString();
+            Operator engine = new Operator();
+            string cs = engine.getConnectionString();
             using var con = new MySqlConnection(cs);
             try
             {
@@ -47,7 +47,7 @@ namespace EmployeeManagement
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 if (rdr.HasRows)
                 {
-                    ope.displayMessageBox("Username already exists.Please input again!");
+                    MessageBox.Show("Username already exists. Please input again!");
                     txtUsername.Clear();
                     txtPassword.Clear();
                     txtConfirm.Clear();
@@ -61,8 +61,7 @@ namespace EmployeeManagement
                     {
                         if (txtPassword.Text != txtConfirm.Text)
                         {
-
-                            ope.displayMessageBox("Password and Confirm must be the same. Please input again!");
+                            MessageBox.Show("Password and Confirm must be the same. Please input again!");
                             txtPassword.Clear();
                             txtConfirm.Clear();
                             txtPassword.Focus();
@@ -75,7 +74,7 @@ namespace EmployeeManagement
                             insertCmd.Parameters.AddWithValue("@name", txtUsername.Text);
                             insertCmd.Parameters.AddWithValue("@pass", txtPassword.Text);
                             insertCmd.ExecuteNonQuery();
-                            ope.displayMessageBox("User account succesfully created");
+                            MessageBox.Show("User account succesfully created");
                             Form login = new frmLogin();
                             login.Show();
                             this.Close();
@@ -86,7 +85,7 @@ namespace EmployeeManagement
             }
             catch (Exception ex)
             {
-                ope.displayMessageBox("error:\n" + ex.ToString());
+                MessageBox.Show("error:\n" + ex.ToString());
             }
             
         }

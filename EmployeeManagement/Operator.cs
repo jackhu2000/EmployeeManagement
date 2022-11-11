@@ -101,7 +101,7 @@ namespace EmployeeManagement
             }
             catch (Exception ex)
             {
-                this.displayMessageBox("error:\n" + ex.ToString());
+                MessageBox.Show("error:\n" + ex.ToString());
                 return -1;
             }
 
@@ -134,7 +134,9 @@ namespace EmployeeManagement
 
         public async Task sendMail(string toEmail)
         {
-            var newPassword = this.createRandomPassword();
+                        var newPassword = this.createRandomPassword();
+
+
             string apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
             var from = new EmailAddress("764701917@nzse.ac.nz", "Administrator");
@@ -149,18 +151,12 @@ namespace EmployeeManagement
             {
                 string sql = "update account set password='" + newPassword + "' " + "where email='" + toEmail + "' " + ";";
                 this.nonQueryExection(sql);
-                this.displayMessageBox("Sending mail succeeded!");
+                MessageBox.Show("Sending mail succeeded!");
             }
             else
             {
-                this.displayMessageBox("Sending mail failed!");
+                MessageBox.Show("Sending mail failed!");
             }
-        }
-
-        public void displayMessageBox(string text)
-        {
-            CustomMessageBox mBox = new CustomMessageBox(text);
-            mBox.Show();
         }
     }
 }

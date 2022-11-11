@@ -23,34 +23,33 @@ namespace EmployeeManagement
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Operator ope = new Operator();
             if (txtOldPassWord.Text == "" || txtNewPassWord.Text == "" || txtConfirmNewPassWord.Text == "")
             {
-                ope.displayMessageBox("Please input Old Password, New Password and Confirm!");                
+                MessageBox.Show("Please input Old Password, New Password and Confirm!");
                 return;
             }
             if (txtConfirmNewPassWord.Text != txtNewPassWord.Text)
             {
-                ope.displayMessageBox("Confirm input must be the same as New Password input");
+                MessageBox.Show("Confirm input must be the same as New Password input");
                 return;
             }
             if (txtOldPassWord.Text == txtNewPassWord.Text)
             {
-                ope.displayMessageBox("New Password cannot be the same as Old Password");
+                MessageBox.Show("New Password cannot be the same as Old Password");
                 return;
             }
 
             if (txtNewPassWord.Text.Length < 8)
             {
-                ope.displayMessageBox("Your password should be 8-character length");
+                MessageBox.Show("Your password should be 8-character length");
                 return;
             }
 
-           
+            Operator ope = new Operator();
             string sql = "update account set password='" + txtNewPassWord.Text + "' " + "where username='" + this.username + "' " + ";";
             if (ope.nonQueryExection(sql) != -1)
             {
-                ope.displayMessageBox("Successfully updated new password!");
+                MessageBox.Show("Successfully updated new password!");
             }       
 
         }
