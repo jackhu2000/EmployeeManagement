@@ -43,12 +43,16 @@ namespace EmployeeManagement
                     {
                         adminForm adminForm = new adminForm(username);
                         adminForm.Show();
-                        this.Close();
+                        this.Hide();
                     }
                     else
                     {
-                        employeeForm employeForm = new employeeForm(username);
-                        employeForm.Show();
+                        //JUST FOR TEST
+                        //employeeForm employeForm = new employeeForm(username);
+                        //employeForm.Show();
+                        //this.Hide();
+                        SeleEmpForm seleEmpForm= new SeleEmpForm(username);
+                        seleEmpForm.Show();
                         this.Hide();
                     }                    
                 }
