@@ -17,6 +17,7 @@ namespace EmployeeManagement
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
 
@@ -73,7 +74,7 @@ namespace EmployeeManagement
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
-            frmEmailAddressInput emailAddressInput = new frmEmailAddressInput();
+            frmForgotPassword emailAddressInput = new frmForgotPassword();
             emailAddressInput.Show();           
         }
 

@@ -129,11 +129,11 @@ namespace EmployeeManagement
             }
         }
 
-   
-
-
+  
         public async Task sendMail(string toEmail)
         {
+            //TODO: create new password should not be included in sendMail.
+            // It needs to be moved out from this function.
             var newPassword = this.createRandomPassword();
             string apikey = Environment.GetEnvironmentVariable("apikey");
             var client = new SendGridClient(apikey);
@@ -147,6 +147,7 @@ namespace EmployeeManagement
             var response = await client.SendEmailAsync(msg);
             if (response.IsSuccessStatusCode)
             {
+                //TODO move update password out of send mail. It should not be included here.
                 string sql = "update account set password='" + newPassword + "' " + "where email='" + toEmail + "' " + ";";
                 this.nonQueryExection(sql);
                 this.displayMessageBox("Sending mail succeeded!");
