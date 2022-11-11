@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -100,10 +101,9 @@ namespace EmployeeManagement
                     em.Text = emds[1];
                     ey.Text = emds[2];
                 }
-
-                if (userdict["isAdmin"] == "1")
-                    isAdmin.Checked = true; 
-                else 
+                if (userdict["isAdmin"] == "True")
+                    isAdmin.Checked = true;
+                else
                     isAdmin.Checked = false;
                 init = false;
             }
@@ -112,12 +112,13 @@ namespace EmployeeManagement
         }
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            if(bfi&&bla&&baddr1&&baddr2&&bcity&&bde&&bsa&&btl&&bul&&bgr&&bem&&bph&&bim&&bemd&&bdob)
+            Operator ope = new Operator();
+            if (bfi&&bla&&baddr1&&baddr2&&bcity&&bde&&bsa&&btl&&bul&&bgr&&bem&&bph&&bim&&bemd&&bdob)
             {
                 bool uploadRes = user.updateInfo(chDic, userdict["username"]);
                 if (uploadRes)
                 {
-                    MessageBox.Show("Update Success !");
+                    ope.displayMessageBox("Update Success !");
                     chDic = new Dictionary<string, string>();
                     bfi = true;
                     bla = true;
@@ -136,8 +137,8 @@ namespace EmployeeManagement
                     bdob = true;
                 }
                 else
-                {
-                    MessageBox.Show("Update Failed !");
+                {                 
+                    ope.displayMessageBox("Update Failed !");
                 }
             }
         }
@@ -540,7 +541,7 @@ namespace EmployeeManagement
             else
             {
                 chDic["isAdmin"] = "0";
-                chDic["Role"] = "Admin";
+                chDic["Role"] = "Employee";
             }
         }
 
@@ -573,6 +574,14 @@ namespace EmployeeManagement
             chDic["imgUrl"] = img.Text;
             msg.Text = "";
             bim=true;
-        }      
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            //TODO: TURN TO ADMINFORM WHEN ADMINFORM DONE.
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Close();
+        }
     }
 }
