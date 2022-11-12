@@ -89,6 +89,11 @@ namespace EmployeeManagement
             return this.userDict;
         }
 
+        public String get_short()
+        {
+            return String.Format("{0} {1}({2})", userDict["FirstName"], userDict["LastName"], userDict["Department"]);
+        }
+
         public bool get_isInit()
         {
             return isInit;

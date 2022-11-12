@@ -110,6 +110,8 @@ namespace EmployeeManagement
             
 
         }
+
+        
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             Operator ope = new Operator();
@@ -578,9 +580,6 @@ namespace EmployeeManagement
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            //TODO: TURN TO ADMINFORM WHEN ADMINFORM DONE.
-            frmLogin login = new frmLogin();
-            login.Show();
             this.Close();
         }
     }
