@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace EmployeeManagement
 {
-    public partial class frmEmailAddressInput : Form
+    public partial class frmForgotPassword : Form
     {
-        public frmEmailAddressInput()
+        public frmForgotPassword()
         {
             InitializeComponent();
         }
@@ -49,6 +49,7 @@ namespace EmployeeManagement
                     MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
                     if (rdr.HasRows)
                     {
+
                         ope.sendMail(txtEmailAddress.Text).Wait(10);
                     }
                     else
