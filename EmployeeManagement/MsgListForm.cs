@@ -115,5 +115,10 @@ namespace EmployeeManagement
         {
             this.Close();
         }
+
+        private void msgl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
