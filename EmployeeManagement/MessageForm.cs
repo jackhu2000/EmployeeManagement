@@ -32,7 +32,6 @@ namespace EmployeeManagement
             }
             
             string sql = "insert into message(Message,EmployeeID) values('" + txtMessage.Text + "'" + ", '" + user  + "')" + ";";
-            MessageBox.Show(sql);
             if (ope.nonQueryExection(sql) != -1)
             {
                 ope.displayMessageBox("Your message or feedback is successfully sent");

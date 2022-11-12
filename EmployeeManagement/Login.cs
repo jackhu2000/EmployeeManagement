@@ -17,6 +17,7 @@ namespace EmployeeManagement
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            
         }
 
 
@@ -42,14 +43,19 @@ namespace EmployeeManagement
                     {
                         adminForm adminForm = new adminForm(username);
                         adminForm.Show();
-                        this.Close();
+                        this.Hide();
                     }
                     else
                     {
+
                         employeeForm employeForm = new employeeForm(username);
                         employeForm.Show();
                         this.Hide();
-                    }                    
+                        //JUST FOR TEST
+                        //SeleEmpForm seleEmpForm= new SeleEmpForm(username);
+                        //seleEmpForm.Show();
+                        //this.Hide();
+                    }
                 }
                 else
                 {
@@ -73,7 +79,7 @@ namespace EmployeeManagement
 
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
-            frmEmailAddressInput emailAddressInput = new frmEmailAddressInput();
+            frmForgotPassword emailAddressInput = new frmForgotPassword();
             emailAddressInput.Show();           
         }
 
