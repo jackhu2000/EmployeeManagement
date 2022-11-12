@@ -47,14 +47,15 @@ namespace EmployeeManagement
                     }
                     else
                     {
-                        //JUST FOR TEST
-                        //employeeForm employeForm = new employeeForm(username);
-                        //employeForm.Show();
-                        //this.Hide();
-                        SeleEmpForm seleEmpForm= new SeleEmpForm(username);
-                        seleEmpForm.Show();
+
+                        employeeForm employeForm = new employeeForm(username);
+                        employeForm.Show();
                         this.Hide();
-                    }                    
+                        //JUST FOR TEST
+                        //SeleEmpForm seleEmpForm= new SeleEmpForm(username);
+                        //seleEmpForm.Show();
+                        //this.Hide();
+                    }
                 }
                 else
                 {

@@ -34,9 +34,8 @@ namespace EmployeeManagement
             this.btnDetails = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +43,7 @@ namespace EmployeeManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(32, 44);
+            this.label1.Location = new System.Drawing.Point(14, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
@@ -53,11 +52,12 @@ namespace EmployeeManagement
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(32, 77);
+            this.listView1.Location = new System.Drawing.Point(14, 61);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(741, 350);
+            this.listView1.Size = new System.Drawing.Size(936, 376);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // btnDetails
             // 
@@ -68,6 +68,7 @@ namespace EmployeeManagement
             this.btnDetails.TabIndex = 2;
             this.btnDetails.Text = "&Details";
             this.btnDetails.UseVisualStyleBackColor = false;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // btnDelete
             // 
@@ -78,6 +79,7 @@ namespace EmployeeManagement
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "De&lete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -86,35 +88,31 @@ namespace EmployeeManagement
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(83, 25);
             this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "button3";
+            this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button4
+            // btnLogout
             // 
-            this.button4.Location = new System.Drawing.Point(342, 455);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 25);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "v";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLogout.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnLogout.Location = new System.Drawing.Point(867, 455);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(83, 25);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "&Log Out";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button5
+            // btnSearchEmployee
             // 
-            this.button5.Location = new System.Drawing.Point(446, 455);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 25);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "v";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(554, 455);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 25);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "v";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSearchEmployee.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnSearchEmployee.Location = new System.Drawing.Point(341, 455);
+            this.btnSearchEmployee.Name = "btnSearchEmployee";
+            this.btnSearchEmployee.Size = new System.Drawing.Size(136, 25);
+            this.btnSearchEmployee.TabIndex = 8;
+            this.btnSearchEmployee.Text = "&Search Employee";
+            this.btnSearchEmployee.UseVisualStyleBackColor = false;
+            this.btnSearchEmployee.Click += new System.EventHandler(this.button1_Click);
             // 
             // adminForm
             // 
@@ -122,15 +120,17 @@ namespace EmployeeManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(962, 559);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSearchEmployee);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "adminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Form";
             this.Load += new System.EventHandler(this.adminForm_Load);
             this.ResumeLayout(false);
@@ -145,8 +145,7 @@ namespace EmployeeManagement
         private System.Windows.Forms.Button btnDetails;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSearchEmployee;
     }
 }
