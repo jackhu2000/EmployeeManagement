@@ -37,6 +37,7 @@ namespace EmployeeManagement
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.msglst = new System.Windows.Forms.Button();
+
             this.SuspendLayout();
             // 
             // label1

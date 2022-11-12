@@ -51,10 +51,6 @@ namespace EmployeeManagement
                         employeeForm employeForm = new employeeForm(username);
                         employeForm.Show();
                         this.Hide();
-                        //JUST FOR TEST
-                        //MsgListForm msgListForm = new MsgListForm();
-                        //msgListForm.Show();
-                        //this.Hide();
                     }
                 }
                 else
