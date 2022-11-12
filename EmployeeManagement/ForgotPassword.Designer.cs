@@ -1,7 +1,7 @@
 ﻿
 namespace EmployeeManagement
 {
-    partial class frmEmailAddressInput
+    partial class frmForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -95,7 +95,7 @@ namespace EmployeeManagement
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmEmailAddressInput
+            // frmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@ namespace EmployeeManagement
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmEmailAddressInput";
+            this.Name = "frmForgotPassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Email Address - Forgot Password";
             this.Load += new System.EventHandler(this.frmEmailAddressInput_Load);
