@@ -46,6 +46,7 @@ namespace EmployeeManagement
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.msglst = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,10 +54,9 @@ namespace EmployeeManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(20, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 30);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee List";
             // 
@@ -74,10 +74,9 @@ namespace EmployeeManagement
             this.Department});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 90);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
+            this.listView1.Location = new System.Drawing.Point(14, 61);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1421, 551);
+            this.listView1.Size = new System.Drawing.Size(881, 376);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -122,10 +121,9 @@ namespace EmployeeManagement
             // btnDetails
             // 
             this.btnDetails.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDetails.Location = new System.Drawing.Point(46, 669);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDetails.Location = new System.Drawing.Point(916, 101);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(119, 37);
+            this.btnDetails.Size = new System.Drawing.Size(83, 25);
             this.btnDetails.TabIndex = 2;
             this.btnDetails.Text = "&Details";
             this.btnDetails.UseVisualStyleBackColor = false;
@@ -134,10 +132,9 @@ namespace EmployeeManagement
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDelete.Location = new System.Drawing.Point(193, 669);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(916, 144);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(119, 37);
+            this.btnDelete.Size = new System.Drawing.Size(83, 25);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "De&lete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -146,10 +143,9 @@ namespace EmployeeManagement
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnAdd.Location = new System.Drawing.Point(343, 669);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(916, 188);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(119, 37);
+            this.btnAdd.Size = new System.Drawing.Size(83, 25);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -158,10 +154,9 @@ namespace EmployeeManagement
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnLogout.Location = new System.Drawing.Point(1239, 669);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Location = new System.Drawing.Point(916, 412);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(119, 37);
+            this.btnLogout.Size = new System.Drawing.Size(83, 25);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "&Log Out";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -170,34 +165,44 @@ namespace EmployeeManagement
             // btnSearchEmployee
             // 
             this.btnSearchEmployee.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(487, 669);
-            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchEmployee.Location = new System.Drawing.Point(916, 61);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(194, 37);
+            this.btnSearchEmployee.Size = new System.Drawing.Size(83, 25);
             this.btnSearchEmployee.TabIndex = 8;
-            this.btnSearchEmployee.Text = "&Search Employee";
+            this.btnSearchEmployee.Text = "&Search";
             this.btnSearchEmployee.UseVisualStyleBackColor = false;
-            this.btnSearchEmployee.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearchEmployee.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // msglst
             // 
             this.msglst.BackColor = System.Drawing.Color.SkyBlue;
-            this.msglst.Location = new System.Drawing.Point(716, 669);
-            this.msglst.Margin = new System.Windows.Forms.Padding(4);
+            this.msglst.Location = new System.Drawing.Point(916, 231);
             this.msglst.Name = "msglst";
-            this.msglst.Size = new System.Drawing.Size(194, 37);
+            this.msglst.Size = new System.Drawing.Size(83, 25);
             this.msglst.TabIndex = 9;
-            this.msglst.Text = "&Message List";
+            this.msglst.Text = "&Message";
             this.msglst.UseVisualStyleBackColor = false;
             this.msglst.Click += new System.EventHandler(this.msglst_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnRefresh.Location = new System.Drawing.Point(916, 274);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(83, 25);
+            this.btnRefresh.TabIndex = 10;
+            this.btnRefresh.Text = "&Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // adminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1460, 822);
+            this.ClientSize = new System.Drawing.Size(1022, 559);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.msglst);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.btnLogout);
@@ -206,7 +211,6 @@ namespace EmployeeManagement
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "adminForm";
@@ -237,5 +241,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.ColumnHeader City;
         private System.Windows.Forms.ColumnHeader Phone;
         private System.Windows.Forms.ColumnHeader Department;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
