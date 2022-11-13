@@ -71,6 +71,7 @@ namespace EmployeeManagement
             this.City,
             this.Phone,
             this.Department});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(14, 61);
             this.listView1.Name = "listView1";
