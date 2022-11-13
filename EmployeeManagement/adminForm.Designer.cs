@@ -31,11 +31,21 @@ namespace EmployeeManagement
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.Username = new System.Windows.Forms.ColumnHeader();
+            this.FirstName = new System.Windows.Forms.ColumnHeader();
+            this.LastName = new System.Windows.Forms.ColumnHeader();
+            this.Date_Of_Birth = new System.Windows.Forms.ColumnHeader();
+            this.AddressLine1 = new System.Windows.Forms.ColumnHeader();
+            this.AddressLine2 = new System.Windows.Forms.ColumnHeader();
+            this.City = new System.Windows.Forms.ColumnHeader();
+            this.Phone = new System.Windows.Forms.ColumnHeader();
+            this.Department = new System.Windows.Forms.ColumnHeader();
             this.btnDetails = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
+            this.msglst = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,13 +61,61 @@ namespace EmployeeManagement
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Username,
+            this.FirstName,
+            this.LastName,
+            this.Date_Of_Birth,
+            this.AddressLine1,
+            this.AddressLine2,
+            this.City,
+            this.Phone,
+            this.Department});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(14, 61);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(936, 376);
+            this.listView1.Size = new System.Drawing.Size(996, 376);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // Username
+            // 
+            this.Username.Text = "Username";
+            // 
+            // FirstName
+            // 
+            this.FirstName.Text = "First Name";
+            // 
+            // LastName
+            // 
+            this.LastName.Text = "LastName";
+            // 
+            // Date_Of_Birth
+            // 
+            this.Date_Of_Birth.Text = "Date of Birth";
+            // 
+            // AddressLine1
+            // 
+            this.AddressLine1.Text = "Address1";
+            // 
+            // AddressLine2
+            // 
+            this.AddressLine2.Text = "Address2";
+            // 
+            // City
+            // 
+            this.City.Text = "City";
+            // 
+            // Phone
+            // 
+            this.Phone.Text = "Phone";
+            // 
+            // Department
+            // 
+            this.Department.Text = "Department";
             // 
             // btnDetails
             // 
@@ -114,12 +172,25 @@ namespace EmployeeManagement
             this.btnSearchEmployee.UseVisualStyleBackColor = false;
             this.btnSearchEmployee.Click += new System.EventHandler(this.button1_Click);
             // 
+            // msglst
+            // 
+            this.msglst.BackColor = System.Drawing.Color.SkyBlue;
+            this.msglst.Location = new System.Drawing.Point(501, 455);
+            this.msglst.Name = "msglst";
+            this.msglst.Size = new System.Drawing.Size(136, 25);
+            this.msglst.TabIndex = 9;
+            this.msglst.Text = "&Message List";
+            this.msglst.UseVisualStyleBackColor = false;
+            this.msglst.Click += new System.EventHandler(this.msglst_Click);
+            // 
             // adminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(962, 559);
+            this.ClientSize = new System.Drawing.Size(1022, 559);
+            this.Controls.Add(this.msglst);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAdd);
@@ -147,5 +218,15 @@ namespace EmployeeManagement
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnSearchEmployee;
+        private System.Windows.Forms.Button msglst;
+        private System.Windows.Forms.ColumnHeader Username;
+        private System.Windows.Forms.ColumnHeader FirstName;
+        private System.Windows.Forms.ColumnHeader LastName;
+        private System.Windows.Forms.ColumnHeader Date_Of_Birth;
+        private System.Windows.Forms.ColumnHeader AddressLine1;
+        private System.Windows.Forms.ColumnHeader AddressLine2;
+        private System.Windows.Forms.ColumnHeader City;
+        private System.Windows.Forms.ColumnHeader Phone;
+        private System.Windows.Forms.ColumnHeader Department;
     }
 }
