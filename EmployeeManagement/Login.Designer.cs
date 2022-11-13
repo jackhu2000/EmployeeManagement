@@ -46,26 +46,29 @@ namespace EmployeeManagement
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(192, 135);
+            this.txtUsername.Location = new System.Drawing.Point(274, 199);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(266, 25);
+            this.txtUsername.Size = new System.Drawing.Size(378, 31);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(192, 180);
+            this.txtPassword.Location = new System.Drawing.Point(274, 265);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(266, 25);
+            this.txtPassword.Size = new System.Drawing.Size(378, 31);
             this.txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.SkyBlue;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(113, 242);
+            this.btnLogin.Location = new System.Drawing.Point(161, 356);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(73, 32);
+            this.btnLogin.Size = new System.Drawing.Size(104, 47);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -76,20 +79,23 @@ namespace EmployeeManagement
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUsername.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblUsername.Location = new System.Drawing.Point(110, 141);
+            this.lblUsername.Location = new System.Drawing.Point(120, 199);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(80, 20);
+            this.lblUsername.Size = new System.Drawing.Size(110, 30);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username";
+            this.lblUsername.Click += new System.EventHandler(this.lblUsername_Click);
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPassword.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblPassword.Location = new System.Drawing.Point(113, 183);
+            this.lblPassword.Location = new System.Drawing.Point(125, 266);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(76, 20);
+            this.lblPassword.Size = new System.Drawing.Size(105, 30);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password";
             // 
@@ -98,9 +104,10 @@ namespace EmployeeManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(52, 61);
+            this.label1.Location = new System.Drawing.Point(74, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 25);
+            this.label1.Size = new System.Drawing.Size(370, 32);
             this.label1.TabIndex = 5;
             this.label1.Text = "Employee Management System";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -109,9 +116,10 @@ namespace EmployeeManagement
             // 
             this.btnForgotPassword.BackColor = System.Drawing.Color.SkyBlue;
             this.btnForgotPassword.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnForgotPassword.Location = new System.Drawing.Point(207, 242);
+            this.btnForgotPassword.Location = new System.Drawing.Point(296, 356);
+            this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(143, 32);
+            this.btnForgotPassword.Size = new System.Drawing.Size(204, 47);
             this.btnForgotPassword.TabIndex = 6;
             this.btnForgotPassword.Text = "&Forgot Password";
             this.btnForgotPassword.UseVisualStyleBackColor = false;
@@ -120,10 +128,9 @@ namespace EmployeeManagement
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(483, 29);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(148, 83);
+            this.pictureBox1.Size = new System.Drawing.Size(211, 122);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -133,9 +140,10 @@ namespace EmployeeManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(308, 303);
+            this.label2.Location = new System.Drawing.Point(440, 446);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 19);
+            this.label2.Size = new System.Drawing.Size(227, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "RECA Limited Ver 1.0  2022";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -144,9 +152,10 @@ namespace EmployeeManagement
             // 
             this.btnClose.BackColor = System.Drawing.Color.SkyBlue;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(368, 242);
+            this.btnClose.Location = new System.Drawing.Point(526, 356);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(90, 32);
+            this.btnClose.Size = new System.Drawing.Size(129, 47);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -154,10 +163,10 @@ namespace EmployeeManagement
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(539, 362);
+            this.ClientSize = new System.Drawing.Size(770, 532);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnForgotPassword);
@@ -168,6 +177,7 @@ namespace EmployeeManagement
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmLogin";

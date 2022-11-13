@@ -51,10 +51,6 @@ namespace EmployeeManagement
                         employeeForm employeForm = new employeeForm(username);
                         employeForm.Show();
                         this.Hide();
-                        //JUST FOR TEST
-                        //MsgListForm msgListForm = new MsgListForm();
-                        //msgListForm.Show();
-                        //this.Hide();
                     }
                 }
                 else
@@ -96,6 +92,11 @@ namespace EmployeeManagement
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblUsername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,7 +15,7 @@ namespace EmployeeManagement
 {
     public partial class employeeForm : Form
     {
-        //private string username;
+        private string username;
         public employeeForm()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace EmployeeManagement
         public employeeForm(string loginName)
         {
             InitializeComponent();
-          //  username = loginName;
+            username = loginName;
 
             UserID.Text = loginName;
 
@@ -145,6 +145,12 @@ namespace EmployeeManagement
         {
             frmMesasge frmMesasge = new frmMesasge(UserID.Text);
             frmMesasge.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            EmpLeaveReq empLeaveReq = new EmpLeaveReq(username);
+            empLeaveReq.ShowDialog();
         }
     }
 }
