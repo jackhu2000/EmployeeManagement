@@ -59,5 +59,10 @@ namespace EmployeeManagement
         {
             this.Close();
         }
+
+        private void lblOldPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
