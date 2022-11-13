@@ -20,9 +20,20 @@ namespace EmployeeManagement
             Operator ope = new Operator();
             if (txtUsername.Text != "")
             {
-                SeleEmpForm seleEmpForm = new SeleEmpForm(txtUsername.Text);
-                seleEmpForm.Show();
-                this.Close();
+                User user = new User(txtUsername.Text);
+                if (user.get_isInit())
+                {
+                    SeleEmpForm seleEmpForm = new SeleEmpForm(txtUsername.Text);
+                    seleEmpForm.Show();
+                    this.Close();
+                }
+                else
+                {
+                    ope.displayMessageBox("Cannot find user!");
+                    txtUsername.Clear();
+                    txtUsername.Focus();
+                }
+                
             }
             else
             {
