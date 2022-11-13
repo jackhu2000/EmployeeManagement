@@ -112,23 +112,20 @@ namespace EmployeeManagement
                     str3 = "0" + str3;
             }
 
-            label2.Text =  "RE" + str3;
 
             str3 = "RE" + str3;
             sql = "INSERT INTO hrs.account VALUES('" + str3 + "',  '',  '', '', '1/1/2000', '', '', '', '', '', '', '0', '0', '0', '0','1/1/2000', '0','', '');";
-  //          sql = "INSERT INTO hrs.account VALUES('" + "RE00500"+ "',  '',  '', '', '1/1/2000', '', '', '', '', '', '', '0', '0', '0', '0','1/1/2000', '0', '', '');";
 
-            Operator ope1 = new Operator();
-            MySqlConnection con1 = ope1.getMySqlConnection();
+            MySqlConnection con1 = ope.getMySqlConnection();
 
-            if (ope1.nonQueryExection(sql) != -1)
+            if (ope.nonQueryExection(sql) != -1)
             {
                 SeleEmpForm NewEmpForm = new SeleEmpForm(str3);
                 NewEmpForm.Show();
             }
              else
             {
-                ope1.displayMessageBox("Unable to add new record to the database...");
+                ope.displayMessageBox("Unable to add new record to the database...");
             }
 
         }
