@@ -43,7 +43,7 @@ namespace EmployeeManagement
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -68,23 +68,55 @@ namespace EmployeeManagement
 
         private void btnDetails_Click(object sender, EventArgs e)
         {
-            //TODO: the argument should be from list view selection
-            //just for testing
-            SeleEmpForm seleEmpForm = new SeleEmpForm("RE00001");
-            seleEmpForm.Show();
-            this.Close();
+            if (listView1.SelectedItems.Count > 0)
+            {
+                SeleEmpForm seleEmpForm = new SeleEmpForm(listView1.SelectedItems[0].Text);
+                seleEmpForm.Show();
+            }
+            else
+            {
+                Operator ope = new Operator();
+                ope.displayMessageBox("Please select an employee in the list to see his/her details!");
+            }
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //TODO: the argument should be from list view selection
-            //testing
-            string sql = "Delete from account where username='RE00500'";
             Operator ope = new Operator();
-            if (ope.nonQueryExection(sql) != -1)
+            if (listView1.SelectedItems.Count > 0)
             {
-                ope.displayMessageBox("Successfully deleted user!");
+                string selectedUser = listView1.SelectedItems[0].Text;
+                if (username == selectedUser)
+                {
+                    ope.displayMessageBox("User cannot be deleted while in login state");
+                }
+                else
+                {
+                    string sql = "Delete from account where username='" + selectedUser + "'";
+                    if (ope.nonQueryExection(sql) != -1)
+                    {
+                        int index = listView1.Items.IndexOf(listView1.SelectedItems[0]);
+                        userList.RemoveAt(index);
+                        listView1.Items.Clear();
+                        listView1.BeginUpdate();
+                        foreach (string[] user in userList)
+                        {
+                            ListViewItem item = new ListViewItem(user);
+                            listView1.Items.Add(item);
+                        }
+                        listView1.EndUpdate();
+
+                    }
+                }
+                
             }
+            else
+            {
+                ope.displayMessageBox("Please select an employee that needs to be deleted in the list!");
+            }
+
+      
         }
 
         private void msglst_Click(object sender, EventArgs e)
