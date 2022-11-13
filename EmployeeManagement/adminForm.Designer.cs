@@ -46,6 +46,7 @@ namespace EmployeeManagement
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnSearchEmployee = new System.Windows.Forms.Button();
             this.msglst = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -53,9 +54,10 @@ namespace EmployeeManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(14, 38);
+            this.label1.Location = new System.Drawing.Point(20, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(140, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee List";
             // 
@@ -73,9 +75,10 @@ namespace EmployeeManagement
             this.Department});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(14, 61);
+            this.listView1.Location = new System.Drawing.Point(20, 90);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(996, 376);
+            this.listView1.Size = new System.Drawing.Size(1421, 551);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -120,9 +123,10 @@ namespace EmployeeManagement
             // btnDetails
             // 
             this.btnDetails.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDetails.Location = new System.Drawing.Point(32, 455);
+            this.btnDetails.Location = new System.Drawing.Point(46, 669);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(83, 25);
+            this.btnDetails.Size = new System.Drawing.Size(119, 37);
             this.btnDetails.TabIndex = 2;
             this.btnDetails.Text = "&Details";
             this.btnDetails.UseVisualStyleBackColor = false;
@@ -131,9 +135,10 @@ namespace EmployeeManagement
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnDelete.Location = new System.Drawing.Point(135, 455);
+            this.btnDelete.Location = new System.Drawing.Point(193, 669);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(83, 25);
+            this.btnDelete.Size = new System.Drawing.Size(119, 37);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "De&lete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -142,9 +147,10 @@ namespace EmployeeManagement
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnAdd.Location = new System.Drawing.Point(240, 455);
+            this.btnAdd.Location = new System.Drawing.Point(343, 669);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(83, 25);
+            this.btnAdd.Size = new System.Drawing.Size(119, 37);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -153,9 +159,10 @@ namespace EmployeeManagement
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnLogout.Location = new System.Drawing.Point(867, 455);
+            this.btnLogout.Location = new System.Drawing.Point(1239, 669);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(83, 25);
+            this.btnLogout.Size = new System.Drawing.Size(119, 37);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "&Log Out";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -164,9 +171,10 @@ namespace EmployeeManagement
             // btnSearchEmployee
             // 
             this.btnSearchEmployee.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnSearchEmployee.Location = new System.Drawing.Point(341, 455);
+            this.btnSearchEmployee.Location = new System.Drawing.Point(487, 669);
+            this.btnSearchEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchEmployee.Name = "btnSearchEmployee";
-            this.btnSearchEmployee.Size = new System.Drawing.Size(136, 25);
+            this.btnSearchEmployee.Size = new System.Drawing.Size(194, 37);
             this.btnSearchEmployee.TabIndex = 8;
             this.btnSearchEmployee.Text = "&Search Employee";
             this.btnSearchEmployee.UseVisualStyleBackColor = false;
@@ -175,21 +183,34 @@ namespace EmployeeManagement
             // msglst
             // 
             this.msglst.BackColor = System.Drawing.Color.SkyBlue;
-            this.msglst.Location = new System.Drawing.Point(501, 455);
+            this.msglst.Location = new System.Drawing.Point(716, 669);
+            this.msglst.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.msglst.Name = "msglst";
-            this.msglst.Size = new System.Drawing.Size(136, 25);
+            this.msglst.Size = new System.Drawing.Size(194, 37);
             this.msglst.TabIndex = 9;
             this.msglst.Text = "&Message List";
             this.msglst.UseVisualStyleBackColor = false;
             this.msglst.Click += new System.EventHandler(this.msglst_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(833, 745);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 25);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // adminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1022, 559);
+            this.ClientSize = new System.Drawing.Size(1460, 822);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.msglst);
             this.Controls.Add(this.btnSearchEmployee);
             this.Controls.Add(this.btnLogout);
@@ -198,6 +219,7 @@ namespace EmployeeManagement
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "adminForm";
@@ -228,5 +250,6 @@ namespace EmployeeManagement
         private System.Windows.Forms.ColumnHeader City;
         private System.Windows.Forms.ColumnHeader Phone;
         private System.Windows.Forms.ColumnHeader Department;
+        private System.Windows.Forms.Label label2;
     }
 }
