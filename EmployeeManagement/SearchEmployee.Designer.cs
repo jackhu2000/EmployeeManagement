@@ -80,7 +80,7 @@ namespace EmployeeManagement
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(494, 177);
+            this.ClientSize = new System.Drawing.Size(637, 177);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtUsername);
