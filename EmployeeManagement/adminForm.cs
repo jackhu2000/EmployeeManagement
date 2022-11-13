@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 
 namespace EmployeeManagement
 {
@@ -62,8 +65,69 @@ namespace EmployeeManagement
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddEmployeeForm addEmployeeForm = new AddEmployeeForm();
-            addEmployeeForm.Show();
+            string str = "";
+            int val = 0;
+
+            
+            string sql = "SELECT username FROM hrs.account ORDER BY username DESC LIMIT 1;";
+
+            Operator ope = new Operator();
+            MySqlConnection con = ope.getMySqlConnection();
+
+            try
+            {
+                con.Open();
+                MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
+                if (rdr.HasRows)
+                {
+                    rdr.Read();
+                    str = rdr[0].ToString();
+                                      
+                    string str2 = string.Empty;
+                   
+                    for (int i = 0; i < str.Length; i++)
+                    {
+                        if (Char.IsDigit(str[i]))
+                            str2 += str[i];
+                    }
+                    if (str2.Length > 0) val = int.Parse(str2) + 1;
+
+                }
+                else
+                {
+                    str = "RE00001";
+                }
+
+                rdr.Close();
+            }
+            catch (Exception ex)
+            {
+                ope.displayMessageBox("error:\n" + ex.ToString());
+            }
+            con.Close();
+
+            string str3 = val.ToString();
+            for (int i = 0; i <= 5 - str3.Length; i++)
+            {
+                    str3 = "0" + str3;
+            }
+
+
+            str3 = "RE" + str3;
+            sql = "INSERT INTO hrs.account VALUES('" + str3 + "',  '',  '', '', '1/1/2000', '', '', '', '', '', '', '0', '0', '0', '0','1/1/2000', '0','', '');";
+
+            MySqlConnection con1 = ope.getMySqlConnection();
+
+            if (ope.nonQueryExection(sql) != -1)
+            {
+                SeleEmpForm NewEmpForm = new SeleEmpForm(str3);
+                NewEmpForm.Show();
+            }
+             else
+            {
+                ope.displayMessageBox("Unable to add new record to the database...");
+            }
+
         }
 
         private void btnDetails_Click(object sender, EventArgs e)
@@ -123,6 +187,11 @@ namespace EmployeeManagement
         {
             MsgListForm msgListForm= new MsgListForm();
             msgListForm.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

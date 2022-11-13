@@ -42,27 +42,28 @@ namespace EmployeeManagement
             // lblOldPassword
             // 
             this.lblOldPassword.AutoSize = true;
-            this.lblOldPassword.Location = new System.Drawing.Point(99, 59);
+            this.lblOldPassword.Location = new System.Drawing.Point(60, 55);
             this.lblOldPassword.Name = "lblOldPassword";
-            this.lblOldPassword.Size = new System.Drawing.Size(98, 20);
+            this.lblOldPassword.Size = new System.Drawing.Size(138, 30);
             this.lblOldPassword.TabIndex = 0;
             this.lblOldPassword.Text = "Old Password";
+            this.lblOldPassword.Click += new System.EventHandler(this.lblOldPassword_Click);
             // 
             // lblNewPassword
             // 
             this.lblNewPassword.AutoSize = true;
-            this.lblNewPassword.Location = new System.Drawing.Point(99, 118);
+            this.lblNewPassword.Location = new System.Drawing.Point(60, 113);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(104, 20);
+            this.lblNewPassword.Size = new System.Drawing.Size(147, 30);
             this.lblNewPassword.TabIndex = 1;
             this.lblNewPassword.Text = "New Password";
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(139, 174);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(60, 170);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(62, 20);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(87, 30);
             this.lblConfirmPassword.TabIndex = 2;
             this.lblConfirmPassword.Text = "Confirm";
             // 
@@ -71,7 +72,7 @@ namespace EmployeeManagement
             this.txtOldPassWord.Location = new System.Drawing.Point(232, 55);
             this.txtOldPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOldPassWord.Name = "txtOldPassWord";
-            this.txtOldPassWord.Size = new System.Drawing.Size(213, 27);
+            this.txtOldPassWord.Size = new System.Drawing.Size(213, 35);
             this.txtOldPassWord.TabIndex = 1;
             this.txtOldPassWord.UseSystemPasswordChar = true;
             // 
@@ -80,7 +81,7 @@ namespace EmployeeManagement
             this.txtNewPassWord.Location = new System.Drawing.Point(232, 108);
             this.txtNewPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNewPassWord.Name = "txtNewPassWord";
-            this.txtNewPassWord.Size = new System.Drawing.Size(213, 27);
+            this.txtNewPassWord.Size = new System.Drawing.Size(213, 35);
             this.txtNewPassWord.TabIndex = 2;
             this.txtNewPassWord.UseSystemPasswordChar = true;
             // 
@@ -89,7 +90,7 @@ namespace EmployeeManagement
             this.txtConfirmNewPassWord.Location = new System.Drawing.Point(232, 165);
             this.txtConfirmNewPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmNewPassWord.Name = "txtConfirmNewPassWord";
-            this.txtConfirmNewPassWord.Size = new System.Drawing.Size(213, 27);
+            this.txtConfirmNewPassWord.Size = new System.Drawing.Size(213, 35);
             this.txtConfirmNewPassWord.TabIndex = 3;
             this.txtConfirmNewPassWord.UseSystemPasswordChar = true;
             // 
@@ -100,7 +101,7 @@ namespace EmployeeManagement
             this.btnSubmit.Location = new System.Drawing.Point(232, 228);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(95, 29);
+            this.btnSubmit.Size = new System.Drawing.Size(100, 39);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "&Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -110,10 +111,10 @@ namespace EmployeeManagement
             // 
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(351, 228);
+            this.button1.Location = new System.Drawing.Point(351, 230);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 29);
+            this.button1.Size = new System.Drawing.Size(94, 39);
             this.button1.TabIndex = 5;
             this.button1.Text = "&Close";
             this.button1.UseVisualStyleBackColor = false;
@@ -121,7 +122,7 @@ namespace EmployeeManagement
             // 
             // frmPasswordUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(581, 325);
