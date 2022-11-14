@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,9 @@ namespace EmployeeManagement
         private LeaveRequest request;
         private bool init;
         private bool canup;
+        private bool canup2;
         String un = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 _.@/:-%&=,";
+        String n = "123456789";
         public EmpLeaveReq()
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace EmployeeManagement
             InitializeComponent();
             init = true;
             canup = true;
+            canup2 = false;
             isFirstClick = true;
             request = new LeaveRequest(username);
             if(request.isRequest())
@@ -37,6 +41,9 @@ namespace EmployeeManagement
                 reason.Enabled = false;
                 reason.ForeColor = System.Drawing.Color.Black;
                 isFirstClick = false;
+                DateTime dt = DateTime.ParseExact(request.date, "yyyy-MM-dd", System.Globalization.CultureInfo.CurrentCulture);
+                expire.Text = request.duration.ToString();
+                st.Value = dt;
             }
             init = false;
         }
@@ -67,8 +74,10 @@ namespace EmployeeManagement
 
         private void uploadbtn_Click(object sender, EventArgs e)
         {
+            
             if(request.isR)
             {
+                
                 bool res = request.Update(3, "selfcancel");
                 if (res == false)
                 {
@@ -84,7 +93,24 @@ namespace EmployeeManagement
 
             else
             {
-                if(!canup)
+                if (!canup2)
+                {
+                    Notify.Text = "Wrong Expire Format!";
+                    return;
+                }
+                DateTime nowtime = st.Value;
+                if (DateTime.Compare(nowtime, DateTime.Now.AddDays(-1)) < 0)
+                {
+                    Notify.Text = String.Format("StartTime must on or after TODAY");
+                    return;
+                }
+                else
+                {
+                    request.date = nowtime.ToString("yyyy-MM-dd");
+                    request.edate = nowtime.AddDays(int.Parse(expire.Text)).ToString("yyyy-MM-dd");
+                    request.duration=expire.Text;
+                }
+                if (!canup)
                 {
                     return;
                 }
@@ -132,6 +158,39 @@ namespace EmployeeManagement
             }
             canup = true;
             Notify.Text = "";
+        }
+
+        private void EmpLeaveReq_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void st_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void expire_TextChanged(object sender, EventArgs e)
+        {
+            if(expire.Text.Length==0)
+            {
+                canup2= false;
+                return;
+            }
+            foreach(char c in expire.Text)
+            {
+                if(!n.Contains(c))
+                {
+                    Notify.Text = "Wrong Expire Format!";
+                    canup2= false; return;
+                }
+            }
+            canup2= true;
         }
     }
 }

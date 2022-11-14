@@ -26,7 +26,7 @@ namespace EmployeeManagement
                 MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
                 while(rdr.Read())
                 {
-                    lrl.Add(new LeaveRequest(rdr.GetString("reason"),String.Format("{0} {1}({2})", rdr.GetString("FirstName"), rdr.GetString("LastName"), rdr.GetString("Department")),rdr.GetString("reqid"),rdr.GetString("time"),rdr.GetString("username")));
+                    lrl.Add(new LeaveRequest(rdr.GetString("reason"),String.Format("{0} {1}({2})", rdr.GetString("FirstName"), rdr.GetString("LastName"), rdr.GetString("Department")),rdr.GetString("reqid"), rdr.GetDateTime("time").ToString("yyyy-MM-dd"), rdr.GetString("username"), rdr.GetDateTime("etime").ToString("yyyy-MM-dd")));
                 }
                 rdr.Close();
                 con.Close();

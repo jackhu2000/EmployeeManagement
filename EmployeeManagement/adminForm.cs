@@ -56,8 +56,9 @@ namespace EmployeeManagement
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
+            
             SearchEmployee searchEmployee = new SearchEmployee();
             searchEmployee.Show();
             
@@ -193,8 +194,20 @@ namespace EmployeeManagement
         {
 
         }
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            userList = new UserList().getUserList();
+            listView1.BeginUpdate();
+            foreach (string[] user in userList)
+            {
+                ListViewItem item = new ListViewItem(user);
+                listView1.Items.Add(item);
+            }
+            listView1.EndUpdate();
+        }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnLeave_Click(object sender, EventArgs e)
         {
             EmpLeaveList empLeaveList = new EmpLeaveList(username);
             empLeaveList.ShowDialog();

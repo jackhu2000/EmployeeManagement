@@ -64,5 +64,10 @@ namespace EmployeeManagement
         {
             this.Close();
         }
+
+        private void EmpLeaveList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

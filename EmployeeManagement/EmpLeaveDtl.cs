@@ -28,6 +28,8 @@ namespace EmployeeManagement
             el.Text = lr.username;
             Notify.Text = "";
             this.adminname = adminname;
+            sd.Value = DateTime.ParseExact(lr.date, "yyyy-MM-dd", System.Globalization.CultureInfo.CurrentCulture);
+            ed.Value = DateTime.ParseExact(lr.edate, "yyyy-MM-dd", System.Globalization.CultureInfo.CurrentCulture);
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

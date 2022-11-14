@@ -40,12 +40,16 @@
             this.backbtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.Notify = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sd = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ed = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // content
             // 
             this.content.Enabled = false;
-            this.content.Location = new System.Drawing.Point(107, 204);
+            this.content.Location = new System.Drawing.Point(107, 242);
             this.content.Name = "content";
             this.content.Size = new System.Drawing.Size(780, 385);
             this.content.TabIndex = 0;
@@ -97,7 +101,7 @@
             // 
             this.accc.AutoSize = true;
             this.accc.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.accc.Location = new System.Drawing.Point(128, 625);
+            this.accc.Location = new System.Drawing.Point(128, 663);
             this.accc.Name = "accc";
             this.accc.Size = new System.Drawing.Size(164, 28);
             this.accc.TabIndex = 5;
@@ -111,7 +115,7 @@
             this.rejc.Checked = true;
             this.rejc.CheckState = System.Windows.Forms.CheckState.Checked;
             this.rejc.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rejc.Location = new System.Drawing.Point(422, 625);
+            this.rejc.Location = new System.Drawing.Point(422, 663);
             this.rejc.Name = "rejc";
             this.rejc.Size = new System.Drawing.Size(157, 28);
             this.rejc.TabIndex = 6;
@@ -125,7 +129,7 @@
             this.accbtn.BackColor = System.Drawing.Color.Red;
             this.accbtn.Enabled = false;
             this.accbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.accbtn.Location = new System.Drawing.Point(128, 692);
+            this.accbtn.Location = new System.Drawing.Point(128, 730);
             this.accbtn.Name = "accbtn";
             this.accbtn.Size = new System.Drawing.Size(182, 47);
             this.accbtn.TabIndex = 7;
@@ -137,7 +141,7 @@
             // 
             this.rejbtn.BackColor = System.Drawing.Color.Green;
             this.rejbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.rejbtn.Location = new System.Drawing.Point(422, 692);
+            this.rejbtn.Location = new System.Drawing.Point(422, 730);
             this.rejbtn.Name = "rejbtn";
             this.rejbtn.Size = new System.Drawing.Size(182, 47);
             this.rejbtn.TabIndex = 8;
@@ -149,7 +153,7 @@
             // 
             this.backbtn.BackColor = System.Drawing.Color.Black;
             this.backbtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.backbtn.Location = new System.Drawing.Point(705, 692);
+            this.backbtn.Location = new System.Drawing.Point(705, 730);
             this.backbtn.Name = "backbtn";
             this.backbtn.Size = new System.Drawing.Size(182, 47);
             this.backbtn.TabIndex = 9;
@@ -173,18 +177,60 @@
             this.Notify.AutoSize = true;
             this.Notify.BackColor = System.Drawing.Color.Navy;
             this.Notify.ForeColor = System.Drawing.Color.Crimson;
-            this.Notify.Location = new System.Drawing.Point(705, 627);
+            this.Notify.Location = new System.Drawing.Point(705, 665);
             this.Notify.Name = "Notify";
             this.Notify.Size = new System.Drawing.Size(64, 24);
             this.Notify.TabIndex = 11;
             this.Notify.Text = "Notify";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(128, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "StartDate";
+            // 
+            // sd
+            // 
+            this.sd.Enabled = false;
+            this.sd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.sd.Location = new System.Drawing.Point(233, 187);
+            this.sd.Name = "sd";
+            this.sd.Size = new System.Drawing.Size(180, 30);
+            this.sd.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(460, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "EndDate";
+            // 
+            // ed
+            // 
+            this.ed.Enabled = false;
+            this.ed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ed.Location = new System.Drawing.Point(550, 187);
+            this.ed.Name = "ed";
+            this.ed.Size = new System.Drawing.Size(180, 30);
+            this.ed.TabIndex = 15;
             // 
             // EmpLeaveDtl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(992, 786);
+            this.ClientSize = new System.Drawing.Size(996, 839);
+            this.Controls.Add(this.ed);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.sd);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Notify);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.backbtn);
@@ -218,5 +264,9 @@
         private System.Windows.Forms.Button backbtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Notify;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker sd;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker ed;
     }
 }

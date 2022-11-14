@@ -45,10 +45,11 @@
             this.columnHeader3});
             this.lrview.FullRowSelect = true;
             this.lrview.HideSelection = false;
-            this.lrview.Location = new System.Drawing.Point(119, 145);
+            this.lrview.Location = new System.Drawing.Point(76, 103);
+            this.lrview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lrview.MultiSelect = false;
             this.lrview.Name = "lrview";
-            this.lrview.Size = new System.Drawing.Size(1010, 639);
+            this.lrview.Size = new System.Drawing.Size(644, 454);
             this.lrview.TabIndex = 0;
             this.lrview.UseCompatibleStateImageBehavior = false;
             this.lrview.View = System.Windows.Forms.View.Details;
@@ -73,18 +74,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(404, 52);
+            this.label1.Location = new System.Drawing.Point(257, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(461, 41);
+            this.label1.Size = new System.Drawing.Size(348, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "=== Leave Request List ===";
             // 
             // rfbtn
             // 
             this.rfbtn.BackColor = System.Drawing.Color.SkyBlue;
-            this.rfbtn.Location = new System.Drawing.Point(304, 846);
+            this.rfbtn.Location = new System.Drawing.Point(193, 599);
+            this.rfbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rfbtn.Name = "rfbtn";
-            this.rfbtn.Size = new System.Drawing.Size(183, 62);
+            this.rfbtn.Size = new System.Drawing.Size(116, 44);
             this.rfbtn.TabIndex = 2;
             this.rfbtn.Text = "&Refresh";
             this.rfbtn.UseVisualStyleBackColor = false;
@@ -93,9 +96,10 @@
             // bkbtn
             // 
             this.bkbtn.BackColor = System.Drawing.Color.SkyBlue;
-            this.bkbtn.Location = new System.Drawing.Point(767, 846);
+            this.bkbtn.Location = new System.Drawing.Point(488, 599);
+            this.bkbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bkbtn.Name = "bkbtn";
-            this.bkbtn.Size = new System.Drawing.Size(183, 62);
+            this.bkbtn.Size = new System.Drawing.Size(116, 44);
             this.bkbtn.TabIndex = 3;
             this.bkbtn.Text = "&Back";
             this.bkbtn.UseVisualStyleBackColor = false;
@@ -103,16 +107,18 @@
             // 
             // EmpLeaveList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(1242, 951);
+            this.ClientSize = new System.Drawing.Size(790, 674);
             this.Controls.Add(this.bkbtn);
             this.Controls.Add(this.rfbtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lrview);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmpLeaveList";
             this.Text = "EmpLeaveList";
+            this.Load += new System.EventHandler(this.EmpLeaveList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

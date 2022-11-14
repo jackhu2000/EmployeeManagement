@@ -14,6 +14,8 @@ namespace EmployeeManagement
         public String nreqid;
         public String shortinfo;
         public String date;
+        public String edate;
+        public String duration;
         int i;
         public LeaveRequest(String username) 
         { 
@@ -23,13 +25,14 @@ namespace EmployeeManagement
             isR = false;
         }
 
-        public LeaveRequest(String reason, String shortinfo, String nreqid, String date, String username) 
+        public LeaveRequest(String reason, String shortinfo, String nreqid, String date, String username, String edate) 
         { 
             this.reason= reason;
             this.shortinfo= shortinfo;
             this.nreqid= nreqid;
             this.date= date;
             this.username= username;
+            this.edate= edate;
         }
 
         public bool isRequest()
@@ -48,6 +51,9 @@ namespace EmployeeManagement
                         reason = rdr.GetString("reason");
                         isR = true;
                         nreqid = rdr.GetString("reqid");
+                        date = rdr.GetDateTime("time").ToString("yyyy-MM-dd");
+                        edate = rdr.GetDateTime("etime").ToString("yyyy-MM-dd");
+                        duration = rdr.GetString("duration");
                     }
                     i++;
                 }
@@ -107,7 +113,7 @@ namespace EmployeeManagement
             Operator ope = new Operator();
             MySqlConnection con = ope.getMySqlConnection();
             String reqid = String.Format("{0}{1:d5}", username, i);
-            String sql = String.Format("INSERT INTO leavereq SET reqid = '{0}', time=DATE(NOW()), res = 0, EmployeeID = '{1}', reason = '{2}'", reqid, username,reason);
+            String sql = String.Format("INSERT INTO leavereq SET reqid = '{0}', time=DATE('{1}'), res = 0, EmployeeID = '{2}', reason = '{3}', etime=DATE('{4}'), duration = {5}", reqid, date, username,reason, edate, duration);
             try
             {
                 con.Open();
