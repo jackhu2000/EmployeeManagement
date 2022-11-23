@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.expire = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.notice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -163,12 +164,23 @@
             this.label4.Text = "Day(s)";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // notice
+            // 
+            this.notice.AutoSize = true;
+            this.notice.ForeColor = System.Drawing.Color.Red;
+            this.notice.Location = new System.Drawing.Point(116, 108);
+            this.notice.Name = "notice";
+            this.notice.Size = new System.Drawing.Size(63, 24);
+            this.notice.TabIndex = 13;
+            this.notice.Text = "label5";
+            // 
             // EmpLeaveReq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(893, 732);
+            this.Controls.Add(this.notice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.expire);
             this.Controls.Add(this.label3);
@@ -201,5 +213,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox expire;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label notice;
     }
 }

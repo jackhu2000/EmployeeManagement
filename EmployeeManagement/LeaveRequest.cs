@@ -16,6 +16,8 @@ namespace EmployeeManagement
         public String date;
         public String edate;
         public String duration;
+        public bool isLast;
+        public int rees=-1;
         int i;
         public LeaveRequest(String username) 
         { 
@@ -23,6 +25,7 @@ namespace EmployeeManagement
             i = 0;
             reason = "";
             isR = false;
+            isLast = false;
         }
 
         public LeaveRequest(String reason, String shortinfo, String nreqid, String date, String username, String edate) 
@@ -33,6 +36,8 @@ namespace EmployeeManagement
             this.date= date;
             this.username= username;
             this.edate= edate;
+
+            isLast= false;
         }
 
         public bool isRequest()
@@ -46,14 +51,16 @@ namespace EmployeeManagement
                 MySqlDataReader rdr = ope.getMySqlDataReader(sql, con);
                 while (rdr.Read())
                 {
+                    isLast= true;
+                    reason = rdr.GetString("reason");
+                    nreqid = rdr.GetString("reqid");
+                    date = rdr.GetDateTime("time").ToString("yyyy-MM-dd");
+                    edate = rdr.GetDateTime("etime").ToString("yyyy-MM-dd");
+                    duration = rdr.GetString("duration");
+                    rees = rdr.GetInt16("res");
                     if (rdr.GetInt16("res") == 0)
-                    {
-                        reason = rdr.GetString("reason");
-                        isR = true;
-                        nreqid = rdr.GetString("reqid");
-                        date = rdr.GetDateTime("time").ToString("yyyy-MM-dd");
-                        edate = rdr.GetDateTime("etime").ToString("yyyy-MM-dd");
-                        duration = rdr.GetString("duration");
+                    {                       
+                        isR = true;                      
                     }
                     i++;
                 }

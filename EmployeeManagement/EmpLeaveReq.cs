@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,6 +32,7 @@ namespace EmployeeManagement
             canup = true;
             canup2 = false;
             isFirstClick = true;
+            notice.Text = "";
             request = new LeaveRequest(username);
             if(request.isRequest())
             {
@@ -44,6 +46,20 @@ namespace EmployeeManagement
                 DateTime dt = DateTime.ParseExact(request.date, "yyyy-MM-dd", System.Globalization.CultureInfo.CurrentCulture);
                 expire.Text = request.duration.ToString();
                 st.Value = dt;
+            }
+            if(request.isLast)
+            {
+                String result = "";
+                if (request.rees == 0)
+                    result = "Wait";
+                else if (request.rees == 1)
+                    result = "Accept";
+                else if (request.rees == 2)
+                    result = "Reject";
+                else
+                    result = "Cancel";
+                String temp = String.Format("Your last request from {0} to {1} result is : {2}", request.date, request.edate, result);
+                notice.Text = temp;
             }
             init = false;
         }
